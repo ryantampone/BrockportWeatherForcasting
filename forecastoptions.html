@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>Brockport Forecasting</title>
+    <link href="css/headerStyles.css" type="text/css" rel="stylesheet" />
+    <script language="javascript">
+	
+		var date = new Date();
+		document.getElementById("dateToDisplay").innerHTML = date.toDateString();
+		
+	</script>
+    
+</head>
+
+<body bgcolor="#F5F5F5">
+
+		<!-- ====================== Begin Page Header ====================== -->
+
+	    <img src="src/ForecastingLogo.png" alt="Brockport Forecasting Logo" align="left" style="width:;height:128px;">
+    
+   		<img src="src/Ellsworth.png" alt="Ellisworth Logo" align="right" style="width:;height:128px;">
+
+
+		<h1 align="center">Brockport Forecasting System</h1>
+        <p id="dateToDisplay" align="center"  style="font-size:25px; color:#00533E"></p>
+        <script>
+			var date = new Date();
+			document.getElementById("dateToDisplay").innerHTML = date.toDateString();
+		</script>
+              
+        <div id="nav">
+            <div id="nav_wrapper">
+                <ul>
+                    <li><a href="link goes here">PageName</a>
+                        <ul>
+                            <li><a href="Sublink link goes here">SubPageName</a>
+                            <li><a href="Sublink link goes here">SubPageName</a>
+                            <li><a href="Sublink link goes here">SubPageName</a>
+                        </ul>
+                    </li>
+                    <li><a href="link goes here">PageName</a></li>
+                    <li><a href="link goes here">PageName</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div id="callToAction">
+            <h3 align="center">Select an Option</h3>
+        </div>
+        <!-- ====================== End Page Header ====================== -->
+        
+    <CENTER>
+        <!-- Setup navigation button -->
+    
+        <input type="button" value="Register User" 
+    
+        onclick="window.location='new_user_ui.php'"><br /><br />
+    
+    
+    
+        <!-- Setup navigation button -->
+    
+        <input type="button" value="Insert New Course" 
+    
+        onclick="window.location='new_course_ui.php'"><br /><br />
+    
+    
+    
+        <!-- Setup navigation button -->
+    
+        <input type="button" value="Insert New Teaching Assignment" 
+    
+        onclick="window.location='new_assignment_ui.php'"><br /><br />
+    
+    
+    
+        <!-- Setup navigation button -->
+    
+        <input type="button" value="Retrieve All Assignments" 
+    
+        onclick="window.location='retrieve_all_assignments.php'"><br /><br />
+
+    </CENTER>
+        
+</body>
+</html>
