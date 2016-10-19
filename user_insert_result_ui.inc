@@ -21,13 +21,14 @@ function ui_show_user_insert_result($message, $lastname, $firstname,
   }
 
 //finish up the html code, and put the return button to go back to main menu
-echo <<<UPTOEND
+/*echo <<<UPTOEND
   <BR/><BR/>
   <center>
   <input type="button" value="Return to Main Menu"
-	onClick="window.location='forecastoptions.html'"/>
+	onClick="window.location='brockportforecasting/forecastoptions.php"/>
   </center>
-UPTOEND;
+UPTOEND;*/
+echo "<form action='forecastoptions.php'><button >Return to Main Menu</button></form>";
 
  echo "</BODY>";
  echo "</HTML>";

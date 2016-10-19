@@ -29,17 +29,18 @@ function insert_user()
 	$lastname = $_POST['lastname'];
 	$uid = $_POST['uid'];
 	$pwd = $_POST['pwd'];
+	$privilege = $_POST['privilege'];
         
 	// Create a String consisting of the SQL command. Remember that
         // . is the concatenation operator. $varname within double quotes
  	// will be evaluated by PHP
 	$insertStmt = "INSERT INTO user (first, last, 
-		       uid, pwd) values ( '$firstname', '$lastname',
-                      '$uid', '$pwd')";
+		       uid, pwd, privilege) values ( '$firstname', '$lastname',
+                      '$uid', '$pwd', '$privilege')";
 
 	//Execute the query. The result will just be true or false
 	$result = mysql_query($insertStmt);
-
+	echo $result;
 	$message = "";
 
 	if (!$result) 

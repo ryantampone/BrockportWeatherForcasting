@@ -87,7 +87,11 @@ body
   color: white;
 }
 
-#callToAction h3
+
+
+#loginform_wrapper
 {
-  color: #444444;
+  width: 960px;
+  margin: 0 auto;
+  text-align: center;
 }

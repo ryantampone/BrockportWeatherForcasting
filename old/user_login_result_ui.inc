@@ -1,7 +1,6 @@
 <?php
 
-function ui_show_teacher_insert_result($message, $lastname, $firstname, 
-		$specialization, $highestdegree)
+function ui_show_user_login_result($message, $result)
 {
   //----------------------------------------------------------
   // Start the html page
@@ -19,17 +18,31 @@ function ui_show_teacher_insert_result($message, $lastname, $firstname,
 	 echo '<center><font color="blue">'.$message.'</font></center><br />';
        }
   }
-
+	
+	
+while ($row = mysql_fetch_assoc($result)) 
+   {
+     $uid = $row['uid']; 
+     $pwd = $row['pwd']; 
+ 
+      //Put these in a table row. The htmlentities function converts any
+      //special chars in the string to a html-displayable form.
+      echo '<tr>'; 
+      echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($uid).'</SPAN></TD>'; 
+      echo '<TD><SPAN ALIGN=CENTER>'.htmlentities($pwd).'</SPAN></TD>'; 
+      echo '</tr>'; 
+   } 
 //finish up the html code, and put the return button to go back to main menu
 echo <<<UPTOEND
   <BR/><BR/>
   <center>
-  <input type="button" value="Return to Main Menu" 
-	onClick="window.location='ForecastOptions.html'"/>
+  <input type="button" value="Return to Main Menu"
+	onClick="window.location='forecastoptions.html'"/>
   </center>
 UPTOEND;
 
  echo "</BODY>";
  echo "</HTML>";
 }
+
 ?>
