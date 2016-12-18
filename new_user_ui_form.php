@@ -25,7 +25,7 @@
                         <td><input NAME='pwd' TYPE='password' SIZE='50' required/></td>
                     </tr>
 					<tr>
-                        <td><span align='right'>Privilege:</span></td>
+                        <td><span align='right'>Access Group:</span></td>
                         <td><select name='privilege' id='privilege' required>
                                 <option value='student'>Student</option>
                                 <option value='coach'>Coach</option>

@@ -6,7 +6,7 @@
 	echo "
 		<br>
 			<center>
-				<form action='includes/signup.inc.php' method='POST'>
+				<form action='login/signup.php' method='POST'>
 					<input type='text' name='first' placeholder='FirstName'><br>
 					<input type='text' name='last' placeholder='LastName'><br>
 					<input type='text' name='uid' placeholder='Username'><br>
@@ -21,6 +21,6 @@
 			</center>
 		";
 ?>
-				
+
 </body>
 </html>

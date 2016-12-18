@@ -14,7 +14,7 @@
 		<!-- ====================== Begin Page Header ====================== -->
 
 	    <img src="src/ForecastingLogo.png" alt="Brockport Forecasting Logo" align="left" style="width:;height:128px;">
-    
+
    		<img src="src/Ellsworth.png" alt="Ellisworth Logo" align="right" style="width:;height:128px;">
 
 
@@ -24,22 +24,29 @@
 			var date = new Date();
 			document.getElementById("dateToDisplay").innerHTML = date.toDateString();
 		</script>
-              
+
         <div id="nav">
             <div id="nav_wrapper">
                 <ul>
-                    <li><a href="/brockportforecasting/forecastoptions.php">Main Menu</a></li>
-					<li>	<?php
-                            if (isset($_SESSION['id'])){
-                                    echo"<form action='includes/logout.inc.php'>
-                                            <button >Logout</button>
-                                        </form>";
-                            } else{
-                                echo"<form action='includes/login.inc.php' method='POST'>
+                    <!-- <li><a href="/brockportforecasting/forecastoptions.php">Main Menu</a></li> -->
+										<li>	<?php
+                            if (isset($_SESSION['id']))
+														{
+																echo "<a href='#'>Welcome: To Logout, Click the Button to the Right</a> </li><li>";
+                                echo"<form action='login/logout.php'>
+                                        <button >Logout</button>
+                                    </form>";
+                            }
+														else
+														{
+                                /*
+																echo"<form action='login/login.php' method='POST'>
                                         <input type='text' name='uid' placeholder='Username'>
                                         <input type='password' name='pwd' placeholder='Password'>
                                         <button type='submit'>Login</button>
                                     </form>";
+																*/
+																echo "<center><h4 style='color:white;'>Please Login with Your Username and Password</h4></center>";
                             }
                         ?>
                     </li>
@@ -47,5 +54,3 @@
             </div>
         </div>
         <!-- ====================== End Page Header ====================== -->
-        
-        
