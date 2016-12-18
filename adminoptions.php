@@ -4,7 +4,7 @@
 
 
 <?php
-	if (isset($_SESSION['id']))
+	if ((isset($_SESSION['id'])) && ((string)$_SESSION['access'] == 'admin'))
 	{
 		echo
 			"
@@ -21,9 +21,10 @@
 	else
 	{
 		//echo "<script type='text/javascript'>alert('Please login to view this page')</script>";
+		session_destroy();
 		echo "<SCRIPT LANGUAGE='JavaScript'>
-			 window.alert('Please Login First')
-			 window.location.href='../index.php';
+			 window.alert('Please Login as an Admin to View This Page')
+			 window.location.href='index.php';
 			 </SCRIPT>";
 	}
 ?>

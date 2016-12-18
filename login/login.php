@@ -24,6 +24,7 @@
 		else
 		{
 			$_SESSION['id'] = $row['id'];
+			$_SESSION['access'] = $row['access'];
 			$group = $row['access'];
 		}
 
