@@ -25,6 +25,8 @@
 		{
 			$_SESSION['id'] = $row['id'];
 			$_SESSION['access'] = $row['access'];
+			$_SESSION['first'] = $row['first'];
+			$_SESSION['last'] = $row['last'];
 			$group = $row['access'];
 		}
 

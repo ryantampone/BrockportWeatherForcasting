@@ -31,9 +31,12 @@
                 <ul>
                     <!-- <li><a href="/brockportforecasting/forecastoptions.php">Main Menu</a></li> -->
 										<li>	<?php
+														$firstName = (string)$_SESSION['first'];
+														$lastName = (string)$_SESSION['last'];
+														$access = (string)$_SESSION['access'];
                             if (isset($_SESSION['id']))
 														{
-																echo "<a href='#'>Welcome: To Logout, Click the Button to the Right</a> </li><li>";
+																echo "<a href='#'>Welcome to your $access dashboard $firstName $lastName</a> </li><li>";
                                 echo"<form action='login/logout.php'>
                                         <button >Logout</button>
                                     </form>";
