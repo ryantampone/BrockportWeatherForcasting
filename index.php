@@ -5,9 +5,11 @@
 <?php
 		if (isset($_SESSION['id']))
 		{
-				$group = 'blank';
+				$group = (string)$_SESSION['access'];
 				$loginID = (string)$_SESSION['id'];
 
+
+				/*
 				$sql = "SELECT * FROM user WHERE id='$loginID'";
 				$result = $conn->query($sql);
 
