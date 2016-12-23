@@ -1,0 +1,17 @@
+div.cardBody
+{
+  height: 150px;
+  width: 350px;
+  margin: 20px;
+
+  background-color: white;
+}
+
+div.cardHeader
+{
+  height: 50px;
+  width: 350px;
+  margin: 20px;
+
+  background-color: red;
+}

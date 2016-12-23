@@ -1,0 +1,288 @@
+/* =================== Card Index Code ======================= */
+
+
+#createSpace
+{
+  margin-bottom: 75px;
+}
+
+
+#vendor_store{
+  height: 50%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  /*background-color: blue;*/
+  position: absolute;
+  z-index: -1;
+}
+#vendor{
+  height: 90%;
+  width: 40%;
+  position: absolute;
+  top:5%;
+  left: 5%;
+  bottom: 5%;
+  background: white;
+  box-shadow: 5px 5px 5px #bdbdbd/*#b6aeae*/;
+}
+#vendor:hover{
+	box-shadow: 15px 15px 10px #bdbdbd;
+}
+#vendorTitle{
+	position: absolute;
+	background-color: #516382;
+	width: 100%;
+	height: 40%;
+}
+
+
+.outerTable
+{
+	position: absolute;
+  bottom: 0px;
+	width: 100%;
+	height: 60%;
+}
+
+
+.innerTable
+{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  /*
+	position: absolute;
+	width: 100%;
+	height: 60%;*/
+}
+
+#store{
+  height: 90%;
+  width: 40%;
+  position: absolute;
+  top: 5%;
+  bottom: 5%;
+  right: 5%;
+  background: white;
+  box-shadow: 5px 5px 5px #bdbdbd;
+}
+#store:hover{
+	box-shadow: 15px 15px 10px #bdbdbd;
+}
+#storeTitle{
+	position: absolute;
+	background-color: #516382;
+	width: 100%;
+	height: 40%;
+}
+#storeTable{
+	margin-top: 35%;
+	position: absolute;
+	width: 100%;
+	height: 60%;
+}
+#orders_customers{
+  height: 50%;
+  width: 100%;
+  margin-left: auto;
+  margin-right:auto;
+  margin-top: 25%;
+  /*background-color: purple;*/
+  position: absolute;
+}
+#orders{
+  height: 90%;
+  width: 40%;
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+  top: 5%;
+  background: white;
+  box-shadow: 5px 5px 5px #bdbdbd;
+}
+#orders:hover{
+	box-shadow: 15px 15px 10px #bdbdbd;
+}
+#orderTitle{
+	position: absolute;
+	background-color: #516382;
+	width: 100%;
+	height: 40%;
+}
+#orderTable{
+	margin-top: 25%;
+	position: absolute;
+	width: 100%;
+	height: 60%;
+}
+#customers{
+  height: 90%;
+  width: 40%;
+  position: absolute;
+  right: 5%;
+  top:5%;
+  bottom: 5%;
+  background: white;
+  box-shadow: 5px 5px 5px #bdbdbd;
+}
+#customers:hover{
+	box-shadow: 15px 15px 10px #bdbdbd;
+}
+#customerTitle{
+	position: absolute;
+	background-color: #516382;
+	width: 100%;
+	height: 40%;
+}
+#customerTable{
+	margin-top: 27%;
+	position: absolute;
+	width: 100%;
+	height: 60%;
+}
+#item_div{
+  height: 50%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50%;
+  /*background-color: maroon;*/
+  position: absolute;
+  overflow: hidden;
+
+}
+#items{
+  height: 90%;
+  width: 90%;
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  bottom: 5%;
+  background-color: white;
+  box-shadow: 15px 15px 15px #888888;
+}
+.dashTables{
+	font-size: 150%;
+	border: 1px;
+
+}
+.title{
+	position: absolute;
+	margin-left: 3%;
+	margin-top: 18%;
+}
+
+
+
+
+
+
+
+echo
+  "<br><br>
+    <center>
+        <form action='user_add_ui_form.php'><button >Register User</button></form>
+    </center>
+
+    <!-- ===================Index Code Goes Under Here======================= -->
+
+    <div id='createSpace'>
+    <div id='vendor_store'>
+      <div id='vendor'>
+        <div id='vendorTitle'>
+          <div class='title'><font color='white'><h3>VENDOR</h3></font></div>
+        </div>
+        <div class='outerTable'>
+          <div class='innerTable'>
+            <table class='dashTables' align='center' align='center'>
+            <tr>
+              <td height='30px' width='100px'><h4>Active: </h4></td><td id='active_vendors'>$v_active</td>
+            </tr>
+            <tr>
+              <td height='30px' ><h4>Inactive: </h4></td><td id='inactive_vendors'>$v_inactive</td>
+            </tr>
+            <tr>
+              <td height='30px'><h4>Total: </h4></td><td id='total_vendors'>$v_total</td>
+            </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+      <div id='store'>
+        <div id='storeTitle'>
+          <div class='title'><font color='white'><h3>STORE</h3></font></div>
+        </div>
+        <div class='outerTable'>
+          <div class='innerTable'>
+            <table class='dashTables' align='center'>
+            <tr>
+              <td width='175px' height='30px'><h4>Number of Stores: </h4></td><td id='number_stores'>$stores</td>
+            </tr>
+            <tr>
+              <td height='30px'><h4>Monthly Sales: </h4></td><td id='monthly_sales'>$monthlySales</td>
+            </tr>
+            <tr>
+              <td height='30px'><h4>Weekly Sales: </h4></td><td id='weekly_sales'>$weeklySales</td>
+            </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    <div id='orders_customers'>
+      <div id='orders'>
+        <div id='orderTitle'>
+          <div class='title'><font color='white'><h3>ORDER</h3></font></div>
+        </div>
+        <div class='outerTable'>
+          <div class='innerTable'>
+            <table class='dashTables' align='center'>
+            <tr>
+              <td height='30px' width='120px'><h4>Pending: </h4></td><td id='pending_orders'>$pending</td>
+            </tr>
+            <tr>
+              <td height='30px'><h4>Delivered: </h4></td><td id='delivered_orders'>$delivered</td>
+            </tr>
+            <tr>
+              <td height='30px'><h4>Cancelled: </h4></td><td id='cancelled_orders'>$cancelled</td>
+            </tr>
+            <tr>
+              <td height='30px'><h4>Total: </h4></td><td id='total_orders'>$total_o</td>
+            </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+      <div id='customers'>
+        <div id='customerTitle'>
+          <div class='title'> <font color='white'><h3>CUSTOMER</h3></font></div>
+        </div>
+        <div class='outerTable'>
+          <div class='innerTable'>
+            <table class='dashTables' align='center'>
+            <tr>
+              <td height='30px' width='100px'><h4>Active: </h4></td><td id='active_customers'>$c_active</td>
+            </tr>
+            <tr>
+              <td height='30px'><h4>Inactive: </h4></td><td id='inactive_customers'>$c_inactive</td>
+            </tr>
+            <tr>
+              <td height='30px'><h4>Total: </h4></td><td id='total_customers'>$c_total</td>
+            </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  ";

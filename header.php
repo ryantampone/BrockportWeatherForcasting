@@ -9,6 +9,11 @@
     <title>Brockport Forecasting Login</title>
     <link href="css/headerStyles.css" type="text/css" rel="stylesheet" />
 		<link rel='shortcut icon' type='image/x-icon' href='src/favicon.ico' />
+
+		<script language="javascript">
+
+
+		</script>
 </head>
 <body bgcolor="#F5F5F5">
 

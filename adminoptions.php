@@ -1,23 +1,14 @@
 <?php
 	include 'header.php';
-	include 'login/identify.php'
+	include 'login/identify.php';
+	echo"<link href='css/cardStyles.css' type='text/css' rel='stylesheet' />";
 ?>
 
 
 <?php
 	if ((isset($_SESSION['id'])) && ((string)$_SESSION['access'] == 'admin'))
 	{
-		echo
-			"
-			 <div id='callToAction'>
-            	<h3 align='center'>Fill out the user information below</h3>
-        	 </div>
-
-    		<center>
-        		<form action='/brockportforecasting/new_user_ui_form.php'><button >Register User</button></form>
-    		</center>
-
-			";
+		
 	}
 	else
 	{
