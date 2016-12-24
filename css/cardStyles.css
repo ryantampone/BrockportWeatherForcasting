@@ -1,17 +1,31 @@
+div.cardContainer
+{
+  background-color: green;
+}
 div.cardBody
 {
-  height: 150px;
-  width: 350px;
+  min-height: 250px;
+  width: 450px;
   margin: 20px;
+  background-color: blue;
+  box-shadow: 2px 2px 5px grey;
+  display:inline-block;
+}
 
-  background-color: white;
+div.cardBody:hover
+{
+  transition-duration: .1s;
+  transition-timing-function: ease-in-out;
+  box-shadow: 4px 4px 5px grey;
 }
 
 div.cardHeader
 {
-  height: 50px;
-  width: 350px;
+  height: 100px;
   margin: 20px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
 
   background-color: red;
 }
