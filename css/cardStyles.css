@@ -3,7 +3,7 @@ div.cardBody
   min-height: 250px;
   width: 450px;
   margin: 20px;
-  background-color: blue;
+  background-color: white;
   box-shadow: 2px 2px 5px grey;
   display:inline-block;
 }
@@ -18,14 +18,15 @@ div.cardBody:hover
 div.cardBodyContentContainer
 {
   position: absolute;
-  top: 150px;
-  display:inline-block;
-  background-color: lightblue;
+  width: inherit;
+  margin-left: auto;
+  margin-right: auto;
+  /*background-color: lightblue;*/
 }
 
 div.cardBodyContent
 {
-  position: relative;
+
 }
 
 div.cardHeader
@@ -35,7 +36,7 @@ div.cardHeader
   margin-top: 0px;
   margin-left: 0px;
   margin-right: 0px;
-  background-color: red;
+  background-color: #036B54;
   position: relative;
 }
 

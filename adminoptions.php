@@ -18,12 +18,14 @@
 			<div class="cardBody">
 	      <div class="cardHeader">
 	        <div class="cardHeaderTitle">
-	          Users
+	            Testing CSS
 	        </div>
 	      </div>
-	      <div class="cardBodyContent">
-	        <form action="/brockportforecasting/user_add_ui_form.php"><button >Register User</button></form>
-	        <br>
+
+	      <div class="cardBodyContentContainer">
+	        <div class="cardBodyContent">
+	          <form action="/brockportforecasting/user_add_ui_form.php"><button >Register User</button></form>
+	        </div>
 	      </div>
 	    </div>
 

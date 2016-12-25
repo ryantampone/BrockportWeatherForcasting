@@ -42,7 +42,7 @@
 														$access = (string)$_SESSION['access'];
                             if (isset($_SESSION['id']))
 														{
-																echo "<a href='#'>Welcome to your $access dashboard $firstName $lastName</a> </li><li>";
+																echo "<a href='index.php'>Welcome to your $access dashboard $firstName $lastName</a> </li><li>";
                                 echo"<form action='login/logout.php'>
                                         <button >Logout</button>
                                     </form>";
