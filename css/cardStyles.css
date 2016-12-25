@@ -1,6 +1,6 @@
 div.cardContainer
 {
-  background-color: green;
+
 }
 div.cardBody
 {
@@ -26,6 +26,16 @@ div.cardHeader
   margin-top: 0px;
   margin-left: 0px;
   margin-right: 0px;
-
   background-color: red;
+  position: relative;
+}
+
+div.cardHeaderTitle
+{
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  bottom: 10px;
+  left: 10px;
 }
