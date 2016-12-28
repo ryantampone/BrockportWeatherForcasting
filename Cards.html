@@ -12,10 +12,11 @@
 <div id="page">
 
   <div class="cardContainer" style="text-align: center">
+
     <div class="cardBody">
       <div class="cardHeader">
         <div class="cardHeaderTitle">
-            Testing CSS
+            Testing Standard Card
         </div>
       </div>
 
@@ -28,21 +29,57 @@
       </div>
     </div>
 
+
     <div class="cardBody">
       <div class="cardHeader">
-
+        <div class="cardHeaderTitle">
+            Email and Text Notifications
+        </div>
       </div>
-    </div>
 
-    <div class="cardBody">
-      <div class="cardHeader">
-
-      </div>
-    </div>
-
-    <div class="cardBody">
-      <div class="cardHeader">
-
+      <div class="cardBodyContentContainer">
+        <div class="cardBodyContent">
+          <center>
+          <form action="user_search.php" method="post">
+          <table cellpadding="5px">
+            <tr>
+                <th>
+                    Contact Person
+                </th>
+                <th>
+                    Email Address
+                </th>
+                <th>
+                    Phone
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Faculty Member:
+                </td>
+                <td>
+                    <input name="email1" id="email1" TYPE="text" required/>
+                </td>
+                <td>
+                    <input name="phone1" id="phone1" TYPE="text" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Head Forecaster:
+                </td>
+                <td>
+                    <input name="email2" id="email2" TYPE="text" required/>
+                </td>
+                <td>
+                    <input name="phone2" id="phone2" TYPE="text" />
+                </td>
+            </tr>
+          </table>
+          <input type="submit" value="Update"/>
+          </form>
+          </center>
+        </div>
       </div>
     </div>
 

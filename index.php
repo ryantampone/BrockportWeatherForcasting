@@ -8,29 +8,25 @@
 				$group = (string)$_SESSION['access'];
 				$loginID = (string)$_SESSION['id'];
 
-
 				/*
-				$sql = "SELECT * FROM user WHERE id='$loginID'";
-				$result = $conn->query($sql);
+				$sql1 = "SELECT * FROM `emailAndTextNotifications` WHERE id='1'";
+				$result1 = mysql_query($sql1);
+				echo $result1;
+				$message1 = "";
 
-				if(!$row = mysqli_fetch_assoc($result))
+				if (!$result1)
 				{
-					echo "<SCRIPT LANGUAGE='JavaScript'>
-						 window.alert('Error: $loginID')
-						 window.location.href='../index.php';
-						 </SCRIPT>";
+			  	  $message1 = "Error Selecting Faculty Email and Phone: ". mysql_error();
 				}
 				else
 				{
-					$group = $row['access'];
+				  $message1 = "Data for User: ($access) $firstname, $lastname updated successfully.";
+
 				}
 
-				/*
-				echo "<SCRIPT LANGUAGE='JavaScript'>
-					 window.alert('Made it into IF with Value: $group')
-					 window.location.href='../index.php';
-					 </SCRIPT>";
+				show_result($message1);
 				*/
+
 
 				if ($group == 'admin')
 				{

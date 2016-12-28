@@ -3,41 +3,39 @@
 require('db_cn.inc');
 require('user_result_ui.inc');
 
-insert_user();
+modify_user();
 
-function insert_user()
+function modify_user()
 {
 	connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
 
-
+	$id = $_POST['id'];
 	$firstname = $_POST['firstname'];
 	$lastname = $_POST['lastname'];
 	$uid = $_POST['uid'];
 	$pwd = $_POST['pwd'];
 	$access = $_POST['access'];
-	$status = 'Active';
+	$status = 'Inactive';
 
-	$insertStmt = "INSERT INTO user (first, last, uid, pwd, access, status) values ( '$firstname', '$lastname', '$uid', '$pwd', '$access', '$status')";
+	$sql_stmt = "UPDATE `user` SET first='$firstname', last='$lastname', uid='$uid', pwd='$pwd', access='$access', status='$status' WHERE id='$id';";
 
-
-	$result = mysql_query($insertStmt);
+	$result = mysql_query($sql_stmt);
 	echo $result;
 	$message = "";
 
 	if (!$result)
 	{
-  	  $message = "Error in inserting User: $lastname , $firstname: ". mysql_error();
+  	  $message = "Error in updating User: ($access) $firstname, $lastname: ". mysql_error();
 	}
 	else
 	{
-	  $message = "Data for User: $lastname , $firstname inserted successfully.";
+	  $message = "Data for User: ($access) $firstname, $lastname updated successfully.";
 
 	}
 
 	show_result($message);
 
 }
-
 
 
 function connect_and_select_db($server, $username, $pwd, $dbname)
