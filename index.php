@@ -28,9 +28,11 @@
 				*/
 
 
+
+
 				if ($group == 'admin')
 				{
-					echo "<SCRIPT LANGUAGE='JavaScript'>window.location.href='adminoptions.php';</SCRIPT>";
+					 echo "<SCRIPT LANGUAGE='JavaScript'>window.location.href='adminoptions.php';</SCRIPT>";
 				}
 				else if ($group == 'student')
 				{

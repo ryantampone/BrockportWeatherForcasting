@@ -1,7 +1,7 @@
 <?php
 
 require('db_cn.inc');
-require('result_ui.inc');
+require('user_result_ui.inc');
 
 search_user();
 function search_user()
