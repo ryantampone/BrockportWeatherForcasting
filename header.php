@@ -65,26 +65,45 @@
 					function isPhoneNumber1()
 					{
 						var phonenumber = document.getElementById("phone1").value;
-						var pattern = /^\d{3}-\d{3}-\d{4}$/;
-						if (phonenumber.match(pattern))
-							return;
-						else
+						if (phonenumber != "")
 						{
-							alert("Invalid Phone Number, must be in the format ###-###-####");
-							document.getElementById("phone1").value = "";
+							var pattern = /^\d{3}-\d{3}-\d{4}$/;
+							if (phonenumber.match(pattern))
+								return;
+							else
+							{
+								alert("Invalid Phone Number, must be in the format ###-###-####");
+								document.getElementById("phone1").value = "";
+							}
 						}
 					}
 
 					function isPhoneNumber2()
 					{
 						var phonenumber = document.getElementById("phone2").value;
-						var pattern = /^\d{3}-\d{3}-\d{4}$/;
-						if (phonenumber.match(pattern))
+						if (phonenumber != "")
+						{
+							var pattern = /^\d{3}-\d{3}-\d{4}$/;
+							if (phonenumber.match(pattern))
+								return;
+							else
+							{
+								alert("Invalid Phone Number, must be in the format ###-###-####");
+								document.getElementById("phone2").value = "";
+							}
+						}
+					}
+
+					function hasToBeDate()
+					{
+						var mydate = document.getElementById("date").value;
+						var pattern = /^\d{4}-\d{2}-\d{2}$/;
+						if (mydate.match(pattern))
 							return;
 						else
 						{
-							alert("Invalid Phone Number, must be in the format ###-###-####");
-							document.getElementById("phone2").value = "";
+							alert("Invalid Date Format, must be in the format YYYY-MM-DD");
+							document.getElementById("date").value = "";
 						}
 					}
 
@@ -99,7 +118,7 @@
    		<img src="src/Ellsworth.png" alt="Ellisworth Logo" align="right" style="width:;height:128px;">
 
 
-		<h1 align="center">Brockport Forecasting System</h1>
+		<h1 align="center" style="text-shadow: 0 0 4px #FFD405;">Brockport Golden Eagle Forecast</h1>
         <p id="dateToDisplay" align="center"  style="font-size:25px; color:#00533E"></p>
         <script>
 			var date = new Date();
@@ -137,6 +156,6 @@
                 </ul>
             </div>
         </div>
-				<br><br>
+				<br>
 
 				<!-- ====================== End Page Header ====================== -->

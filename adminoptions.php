@@ -43,7 +43,22 @@
 			$hfemail = $row['email'];
 			$hfphone = $row['phone'];
 		}
-		mysql_free_result($result1);
+		mysql_free_result($result2);
+
+		//--------------------------------------------------------------------------
+
+		$sql3 = "SELECT COUNT(*) FROM `forecasts` WHERE STATUS = 'awaitingApproval';";
+		$result3 = mysql_query($sql3);
+		if (!$result3)
+		{
+			echo "Error getting count";
+			exit;
+		}
+		while($row = mysql_fetch_assoc($result3))
+		{
+			$numberOfReportsAwaitingApproval = $row['COUNT(*)'];
+		}
+		mysql_free_result($result3);
 
 
 		//Connect to the DB
@@ -147,14 +162,13 @@
 			<div class='cardBody'>
 				<div class='cardHeader'>
 					<div class='cardHeaderTitle'>
-							Manage Emailing List
+							Submitted Forecasts
 					</div>
 				</div>
 				<div class='cardBodyContentContainer'>
 					<div class='cardBodyContent'>
-						<form action='/brockportforecasting/user_add_ui_form.php'><button>Register User</button></form><br>
-						<form action='/brockportforecasting/user_add_ui_form.php'><button>Modify User</button></form><br>
-						<form action='/brockportforecasting/user_add_ui_form.php'><button>Remove User</button></form>
+						<p>Number of Reports Awaiting Approval: $numberOfReportsAwaitingApproval</p><br>
+						<form action='/brockportforecasting/admin_review_forecast.php'><button >Approve Submitted Forecasts</button></form>
 					</div>
 				</div>
 			</div>

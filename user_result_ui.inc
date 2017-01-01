@@ -22,6 +22,7 @@ function show_result($message, $result, $page)
        }
   }
 
+
   // If message is null, then determine source page and redirect to appropriate page
   if ($page = 'userModifySearch')
   {
@@ -119,7 +120,7 @@ function show_result($message, $result, $page)
        echo"
        <center><h2>Would you like to delete this user?</h2></center>
          <div id='userdataform'>
-               <form action='user_modify.php' method='post'>
+               <form action='user_remove.php' method='post'>
                    <input name='id' id='id' TYPE='hidden' value='$id'/>
                    <table align='center'>
                        <tr>
@@ -184,7 +185,13 @@ function show_result($message, $result, $page)
     echo "</BODY>";
     echo "</HTML>";
   }
-
+  else
+  {
+    echo "<SCRIPT LANGUAGE='JavaScript'>
+       window.alert('$page')
+       window.location.href='index.php';
+       </SCRIPT>";
+  }
 
 }
 ?>
