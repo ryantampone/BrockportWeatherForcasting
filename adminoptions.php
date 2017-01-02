@@ -168,7 +168,7 @@
 				<div class='cardBodyContentContainer'>
 					<div class='cardBodyContent'>
 						<p>Number of Reports Awaiting Approval: $numberOfReportsAwaitingApproval</p><br>
-						<form action='/brockportforecasting/admin_review_forecast.php'><button >Approve Submitted Forecasts</button></form>
+						<form action='/brockportforecasting/admin_select_forecast.php'><button >Approve Submitted Forecasts</button></form>
 					</div>
 				</div>
 			</div>

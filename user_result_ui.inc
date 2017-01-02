@@ -34,6 +34,7 @@ function show_result($message, $result, $page)
          $uid = $row['uid'];
          $pwd = $row['pwd'];
          $access = $row['access'];
+      }
 
          //Takes the values from the databse row and puts them as default values in the form
          echo"
@@ -98,7 +99,6 @@ function show_result($message, $result, $page)
              </div>
 
          </form> ";
-      }
 
       //finishes the html body
       echo "</BODY>";

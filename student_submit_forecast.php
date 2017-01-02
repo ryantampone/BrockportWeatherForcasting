@@ -14,11 +14,11 @@ function submit_forecast()
 	$gametime = $_POST['gametime'];
 	$location = $_POST['location'];
 	$forecast = $_POST['forecast'];
-	$temperaturehigh = $_POST['temperaturehigh'].'°F';
-	$temperaturelow = $_POST['temperaturelow'].'°F';
+	$temperaturehigh = $_POST['temperaturehigh'];
+	$temperaturelow = $_POST['temperaturelow'];
 	$windspeed = $_POST['windspeed'].' MPH';
 	$winddirection = $_POST['winddirection'];
-	$chanceofrain = $_POST['chanceofrain'].'%';
+	$chanceofrain = $_POST['chanceofrain'];
 	$discussion = $_POST['discussion'];
 	$forecasterfn = $_POST['forecasterfn'];
 	$forecasterln = $_POST['forecasterln'];
