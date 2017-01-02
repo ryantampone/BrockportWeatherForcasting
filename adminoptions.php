@@ -167,8 +167,48 @@
 				</div>
 				<div class='cardBodyContentContainer'>
 					<div class='cardBodyContent'>
-						<p>Number of Reports Awaiting Approval: $numberOfReportsAwaitingApproval</p><br>
-						<form action='/brockportforecasting/admin_select_forecast.php'><button >Approve Submitted Forecasts</button></form>
+						<center>Number of Reports Awaiting Approval: $numberOfReportsAwaitingApproval</center><br>
+						<form action='admin_select_forecast_process.php' method='post'>
+                <table align='center'>
+                    <tr>
+                        <td><span align='right'>Forecast:</span></td>
+                        <td><select id='forecast' name='forecast'>";
+
+
+													connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
+													$sql = "SELECT * FROM `forecasts` WHERE status = 'awaitingApproval' ORDER BY 'id';";
+													$result = mysql_query($sql);
+													if (!$result)
+													{
+														$message = "Error! Unable to get forecasts from the Database: ".mysql_error();
+														echo "<SCRIPT LANGUAGE='JavaScript'>
+															 window.alert('$message')
+															 window.location.href='index.php';
+															 </SCRIPT>";
+														exit;
+													}
+													while ($row = mysql_fetch_assoc($result))
+													{
+														$id = $row['id'];
+														$sport = $row['sport'];
+														$forecast = $row['forecast'];
+														$forecasterfn = $row['forecasterfn'];
+														$forecasterfn = $row['forecasterfn'];
+														$name = $forecasterfn.', '.$forecasterln;
+														$option = $id.': '.$sport.', '.$forecast;
+
+														echo "<option value='$id'>".$option."</option>";
+													}
+
+												echo "
+												</td>
+                    </tr>
+                </table>
+								<input TYPE='hidden' name='page' id='page' SIZE='50' value='userModifySearch'/>
+                <p align='center'>
+                    <input type='submit' value='Review and Approve Selected Forecast'/>
+                </p>
+            </form>
 					</div>
 				</div>
 			</div>

@@ -21,14 +21,7 @@
 	}
 
 
-	echo"
-		<link href='/brockportforecasting/css/cardStyles.css' type='text/css' rel='stylesheet' />
-		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-	";
-?>
-
-<?php
-	//function that gets all of the forecast data based on the selected forecast
+//function that gets all of the forecast data based on the selected forecast
 getForecast();
 function getForecast()
 {
@@ -39,7 +32,6 @@ function getForecast()
 	$sql_stmt = "SELECT * FROM `forecasts` WHERE id='$forecastid';";
 
 	$result = mysql_query($sql_stmt);
-	echo $result;
 	$message = "";
 
 	if (!$result)
