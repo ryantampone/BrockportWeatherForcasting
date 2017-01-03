@@ -73,7 +73,7 @@ function show_result($message, $result, $forecastid, $statusFlag)
                         <td><input name='winddirection' id='winddirection' TYPE='text' SIZE='50' isTextCityOrPersonKey(event)' onpaste='return false' maxlength='15' value='$winddirection' required/></td>
                     </tr>
                     <tr>
-                        <td><span align='right'>Chance of Rain:</span></td>
+                        <td><span align='right'>Chance of Precipitation:</span></td>
                         <td><input name='chanceofrain' id='chanceofrain' TYPE='text' placeholder='e.g. 50 (% will be added automatically)' SIZE='50' maxlength='3' onKeyPress='hasToBeNumber(event)' onpaste='return false' value='$chanceofrain' required/></td>
                     </tr>
                     <tr>

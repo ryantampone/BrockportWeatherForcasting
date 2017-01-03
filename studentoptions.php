@@ -56,7 +56,7 @@
 										</td>
 								</tr>
 								<tr>
-										<td><span align='right'>Chance of Rain:</span></td>
+										<td><span align='right'>Chance of Precipitation:</span></td>
 										<td><input name='chanceofrain' id='chanceofrain' TYPE='text' placeholder='e.g. 50 (% will be added automatically)' SIZE='50' maxlength='3' onKeyPress='hasToBeNumber(event)' onpaste='return false' required/></td>
 								</tr>
 								<tr>

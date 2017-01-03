@@ -10,7 +10,7 @@ function show_result($message, $result, $forecastid, $statusFlag)
   echo "<BODY>";
   echo "<link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>";
 
-  if ((isset($_SESSION['id'])) && ((string)$_SESSION['access'] == 'admin'))
+  if ((isset($_SESSION['id'])) && ((string)$_SESSION['access'] == 'coach' || (string)$_SESSION['access'] == 'admin'))
   {
     if ($statusFlag == 'Success')
     {
@@ -54,7 +54,7 @@ function show_result($message, $result, $forecastid, $statusFlag)
                     </tr>
                     <tr>
                       <td><span align='right'><u>Chance of Precipitation:</u></span></td>
-                      <td><span align='right'><strong><font color='#00543F'>$chanceofrain</font></strong></span></td>
+                      <td><span align='right'><strong><font color='#00543F'>$chanceofrain %</font></strong></span></td>
                     </tr>
                     <tr>
                       <td><span align='right'><u>Forecast Discussion:</u></span></td>
