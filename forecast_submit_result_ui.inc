@@ -1,5 +1,5 @@
 <?php
-function show_result($message, $fmemail, $fmphone, $hfemail, $hfphone, $forecasterfn, $forecasterln, $statusFlag)
+function show_result($message, $fmemail, $fmphone, $hfemail, $hfphone, $forecasterfn, $forecasterln, $statusFlag, $emailSubject, $emailText, $phoneSubject, $phoneText)
 {
   //----------------------------------------------------------
   // Start the html page
@@ -13,26 +13,26 @@ function show_result($message, $fmemail, $fmphone, $hfemail, $hfphone, $forecast
   if ($statusFlag != 'error')
   {
       $toEmail = "$fmemail, $hfemail";
-      $subjectEmail = "New Weather Forecast Submitted";
-      $txtEmail = "Student ($forecasterln, $forecasterfn) has submitted a new forecast. \nLogin to view this report: http://www.ryantampone.com/brockportforecasting/index.php";
+      $subjectEmail = $emailSubject;
+      $txtEmail = $emailText;
       $headersEmail = "From: <brockportweatherforecasting@ryantampone.com>";
       mail($toEmail,$subjectEmail,$txtEmail,$headersEmail);
 
-      //Mail functions for text messageStore
+      //Mail functions for text message
       if ($fmphone != "")
     	{
         $toPhone1 = "$fmphone";
-        $subjectPhone1 = "New Weather Forecast Submitted";
-        $txtPhone1 = "Student ($forecasterln, $forecasterfn) has submitted a new forecast. \nLogin to view this report:\nhttps://goo.gl/oXlVhz";
+        $subjectPhone1 = $phoneSubject;
+        $txtPhone1 = $phoneText;
         $headersPhone1 = "From: <bportforecasting@ryantampone.com>";
         mail($toPhone1,$subjectPhone1,$txtPhone1,$headersPhone1);
     	}
 
     	if ($hfphone != "")
-    	{
+      {
         $toPhone2 = "$hfphone";
-        $subjectPhone2 = "New Weather Forecast Submitted";
-        $txtPhone2 = "Student ($forecasterln, $forecasterfn) has submitted a new forecast. \nLogin to view this report:\nhttps://goo.gl/oXlVhz";
+        $subjectPhone2 = $phoneSubject;
+        $txtPhone2 = $phoneText;
         $headersPhone2 = "From: <bportforecasting@ryantampone.com>";
         mail($toPhone2,$subjectPhone2,$txtPhone2,$headersPhone2);
     	}

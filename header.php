@@ -142,13 +142,6 @@
                             }
 														else
 														{
-                                /*
-																echo"<form action='login/login.php' method='POST'>
-                                        <input type='text' name='uid' placeholder='Username'>
-                                        <input type='password' name='pwd' placeholder='Password'>
-                                        <button type='submit'>Login</button>
-                                    </form>";
-																*/
 																echo "<center><h4 style='color:white;'>Please Login with Your Username and Password</h4></center>";
                             }
                         ?>
@@ -156,6 +149,5 @@
                 </ul>
             </div>
         </div>
+				<!-- =========================End of Header======================== -->
 				<br>
-
-				<!-- ====================== End Page Header ====================== -->

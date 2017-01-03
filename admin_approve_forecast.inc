@@ -34,7 +34,7 @@ function show_result($message, $result, $forecastid, $statusFlag)
 
         echo "
           <center><h2>Please review the forecast information below</h2></center>
-            <form action='student_submit_forecast.php' method='post'>
+            <form action='admin_submit_approved_forecast.php' method='post'>
                 <table align='center'>
                     <tr>
                         <td><span align='right'>Sport:</span></td>
@@ -89,6 +89,7 @@ function show_result($message, $result, $forecastid, $statusFlag)
                         <td><input name='forecasterln' id='forecasterln' TYPE='text' SIZE='50' placeholder='e.g. Doe' isTextCityOrPersonKey(event)' onpaste='return false' maxlength='25' value='$forecasterln' required/></td>
                     </tr>
                 </table>
+                <input TYPE='hidden' name='forecastid' id='forecastid' value='$forecastid'>
                 <p align='center'>
                     <input type='submit' value='Approve Forecast'/>
                     <input type='reset' value='Reset'/>

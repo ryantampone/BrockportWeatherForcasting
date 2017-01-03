@@ -1,5 +1,7 @@
 <?php
-
+	session_start();
+?>
+<?php
 require('db_cn.inc');
 require('forecast_submit_result_ui.inc');
 
@@ -8,7 +10,7 @@ submit_forecast();
 function submit_forecast()
 {
 	connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
-
+	$forecastid = $_POST['forecastid'];
 	$sport = $_POST['sport'];
 	$gamedate = $_POST['date'];
 	$gametime = $_POST['gametime'];
@@ -16,16 +18,18 @@ function submit_forecast()
 	$forecast = $_POST['forecast'];
 	$temperaturehigh = $_POST['temperaturehigh'];
 	$temperaturelow = $_POST['temperaturelow'];
-	$windspeed = $_POST['windspeed'];
+	$windspeed = $_POST['windspeed'].' MPH';
 	$winddirection = $_POST['winddirection'];
 	$chanceofrain = $_POST['chanceofrain'];
 	$discussion = $_POST['discussion'];
 	$forecasterfn = $_POST['forecasterfn'];
 	$forecasterln = $_POST['forecasterln'];
 	$datesubmitted = date('Y-m-d');
-	$status = 'awaitingApproval';
+	$status = 'approved';
 
-	$insertStmt = "INSERT INTO `forecasts` (dateofgame, timeofgame, sport, location, forecast, temphigh, templow, windspeed, winddirection, chanceofrain, discussion, forecasterfn, forecasterln, datesubmitted, status) values ('$gamedate', '$gametime', '$sport', '$location', '$forecast', '$temperaturehigh', '$temperaturelow', '$windspeed', '$winddirection', '$chanceofrain', '$discussion', '$forecasterfn', '$forecasterln', '$datesubmitted', '$status')";
+	$insertStmt = "UPDATE `forecasts` SET dateofgame='$gamedate', timeofgame='$gametime', sport='$sport', location='$location',
+	forecast='$forecast', temphigh='$temperaturehigh', templow='$temperaturelow', windspeed='$windspeed', winddirection='$winddirection',
+	chanceofrain='$chanceofrain', discussion='$discussion', forecasterfn='$forecasterfn', forecasterln='$forecasterln', datesubmitted='$datesubmitted', status='$status' WHERE id='$forecastid'";
 
 
 	$result = mysql_query($insertStmt);
@@ -34,12 +38,12 @@ function submit_forecast()
 
 	if (!$result)
 	{
-  	  $message = "Error Submitting Forecast ($forecast): ". mysql_error();
+  	  $message = "Error Approving Forecast ($forecast): ". mysql_error();
 			$statusFlag = "error";
 	}
 	else
 	{
-	  $message = "Forecast ($forecast) submitted successfully.";
+	  $message = "Forecast ($forecastid, $forecast) has been approved).";
 		$statusFlag = "success";
 	}
 
@@ -48,8 +52,8 @@ function submit_forecast()
 	$result1 = mysql_query($sql1);
 	if (!$result1)
 	{
-		$fmemail = 'Error retrieving faculty email address for notification';
-		$fmphone = 'Error retrieving faculty phone number for notification';
+		$fmemail = 'Error A';
+		$fmphone = 'Error A';
 		//echo "Error getting Factulty member contact info";
 		exit;
 	}
@@ -96,10 +100,13 @@ function submit_forecast()
 		$headForecasterPhone = "";
 	}
 
-	$emailSubject = "New Weather Forecast Submitted";
-	$emailText = "Student ($forecasterln, $forecasterfn) has submitted a new forecast. \nLogin to view this report: http://www.ryantampone.com/brockportforecasting/index.php";
-	$phoneSubject = "New Weather Forecast Submitted";
-	$phoneText = "Student ($forecasterln, $forecasterfn) has submitted a new forecast. \nLogin to view this report:\nhttps://goo.gl/oXlVhz";
+	$adminfirstName = (string)$_SESSION['first'];
+	$adminlastName = (string)$_SESSION['last'];
+
+	$emailSubject = "Weather Forecast Approved";
+	$emailText = "Admin ('$adminlastName', '$adminfirstName') has Approved Forecast: $forecastid, $forecast";
+	$phoneSubject = "Weather Forecast Approved";
+	$phoneText = "Admin ('$adminlastName', '$adminfirstName') has Approved Forecast: $forecastid, $forecast";
 
 
 	show_result($message, $fmemail, $facultyPhone, $hfemail, $headForecasterPhone, $forecasterfn, $forecasterln, $statusFlag, $emailSubject, $emailText, $phoneSubject, $phoneText);

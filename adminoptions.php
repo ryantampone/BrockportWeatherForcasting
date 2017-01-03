@@ -1,13 +1,10 @@
 <?php
 	include 'header.php';
-	//include 'login/identify.php';
 	echo"
 		<link href='/brockportforecasting/css/cardStyles.css' type='text/css' rel='stylesheet' />
 		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 	";
-?>
 
-<?php
 		require('db_cn.inc');
 		connect_and_select_db(DB_SERVER, DB_UN,DB_PWD,DB_NAME);
 		//function to prepopulate the email and text Notifications card
@@ -51,7 +48,7 @@
 		$result3 = mysql_query($sql3);
 		if (!$result3)
 		{
-			echo "Error getting count";
+			echo "Error getting forecasts awaiting approval count";
 			exit;
 		}
 		while($row = mysql_fetch_assoc($result3))
@@ -108,7 +105,7 @@
 			<div class='cardBody'>
 				<div class='cardHeader'>
 					<div class='cardHeaderTitle'>
-							Email and Text Notifications
+							Notifications
 					</div>
 				</div>
 				<div class='cardBodyContentContainer'>
@@ -167,7 +164,7 @@
 				</div>
 				<div class='cardBodyContentContainer'>
 					<div class='cardBodyContent'>
-						<center>Number of Reports Awaiting Approval: $numberOfReportsAwaitingApproval</center><br>
+						<center><strong>Number of Reports Awaiting Approval: $numberOfReportsAwaitingApproval</strong></center><br>
 						<form action='admin_select_forecast_process.php' method='post'>
                 <table align='center'>
                     <tr>
@@ -212,6 +209,9 @@
 					</div>
 				</div>
 			</div>
+
+
+			
 		</div>
 		";
 	}
@@ -224,7 +224,8 @@
 			 window.location.href='index.php';
 			 </SCRIPT>";
 	}
-?>
-
+echo "
 </body>
 </html>
+"
+?>

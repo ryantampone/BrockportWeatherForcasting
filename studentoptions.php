@@ -41,18 +41,18 @@
 								</tr>
 								<tr>
 										<td><span align='right'>Wind Speed (MPH):</span></td>
-										<td><input name='windspeed' id='windspeed' TYPE='text' SIZE='50' placeholder='e.g. 3 (MPH will be added automatically)' isTextCityOrPersonKey(event)' onpaste='return false' maxlength='15' required/></td>
+										<td><input name='windspeed' id='windspeed' TYPE='text' SIZE='50' placeholder='e.g. 3 (MPH will be added automatically)' onKeyPress='hasToBeNumber(event)' onpaste='return false' maxlength='15' required/></td>
 								</tr>
 								<tr>
 										<td><span align='right'>Wind Direction:</span></td>
 										<td><input TYPE='radio' name='winddirection' id='winddirection' value='North' checked='checked'>North<br>
-												<input TYPE='radio' name='winddirection' id='winddirection' value='NorthEast'>North East<br>
+												<input TYPE='radio' name='winddirection' id='winddirection' value='North East'>North East<br>
 												<input TYPE='radio' name='winddirection' id='winddirection' value='East'>East<br>
-												<input TYPE='radio' name='winddirection' id='winddirection' value='SouthEast'>South East<br>
+												<input TYPE='radio' name='winddirection' id='winddirection' value='South East'>South East<br>
 												<input TYPE='radio' name='winddirection' id='winddirection' value='South'>South<br>
-												<input TYPE='radio' name='winddirection' id='winddirection' value='SouthWest'>South West<br>
+												<input TYPE='radio' name='winddirection' id='winddirection' value='South West'>South West<br>
 												<input TYPE='radio' name='winddirection' id='winddirection' value='West'>West<br>
-												<input TYPE='radio' name='winddirection' id='winddirection' value='NorthWest'>North West
+												<input TYPE='radio' name='winddirection' id='winddirection' value='North West'>North West
 										</td>
 								</tr>
 								<tr>

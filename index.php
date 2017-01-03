@@ -8,27 +8,6 @@
 				$group = (string)$_SESSION['access'];
 				$loginID = (string)$_SESSION['id'];
 
-				/*
-				$sql1 = "SELECT * FROM `emailAndTextNotifications` WHERE id='1'";
-				$result1 = mysql_query($sql1);
-				echo $result1;
-				$message1 = "";
-
-				if (!$result1)
-				{
-			  	  $message1 = "Error Selecting Faculty Email and Phone: ". mysql_error();
-				}
-				else
-				{
-				  $message1 = "Data for User: ($access) $firstname, $lastname updated successfully.";
-
-				}
-
-				show_result($message1);
-				*/
-
-
-
 
 				if ($group == 'admin')
 				{
@@ -67,9 +46,6 @@
 
 
 ?>
-
-
-
 
 </body>
 </html>
