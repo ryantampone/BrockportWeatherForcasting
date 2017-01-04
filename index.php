@@ -34,10 +34,11 @@
 							<div class='innerTable'>
 							<p align='center'><img src='src/login_icon.png' height='110' width='110'/></p>
 							<form action='login/login.php' method='POST'>
-									<input type='text' name='uid' id='uid' placeholder='Username' required><br><br>
+									<input type='text' name='uid' id='uid' placeholder='Username' required><br>
 									<input type='password' name='pwd' placeholder='Password' required><br><br>
-									<button type='submit' name='submit' id='submit' onClick=''>Login</button>
+									<button type='submit' name='submit' id='submit' onClick=''>Login</button><br><br>
 							</form>
+							<form action='/brockportforecasting/registration_enter_key.php'><button >Signup</button></form>
 							</div>
 						</div>
 						</center>

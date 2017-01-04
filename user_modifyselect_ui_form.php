@@ -11,7 +11,7 @@
 	if ((isset($_SESSION['id'])) && ((string)$_SESSION['access'] == 'admin'))
 	{
 		echo "
-		<center><h2>Please select a forecast to approve</h2></center>
+		<center><h2>Please select a user to modify</h2></center>
     	<div id='userdataform'>
             <form action='user_search.php' method='post'>
                 <table align='center'>

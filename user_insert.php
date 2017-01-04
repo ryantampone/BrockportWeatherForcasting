@@ -30,7 +30,7 @@ function insert_user()
 	}
 	else
 	{
-	  $message = "Data for User: $lastname , $firstname inserted successfully.";
+	  $message = "User ($lastname , $firstname) registered successfully.";
 
 	}
 

@@ -107,6 +107,21 @@
 						}
 					}
 
+					function checkpwds()
+					{
+						var pwd1 = document.getElementById("pwd").value;
+						var pwd2 = document.getElementById("pwdcheck").value;
+						if (pwd2 != "")
+						{
+							if (pwd1 != pwd2)
+							{
+								document.getElementById("pwdcheck").value = "";
+								document.getElementById("pwdcheck").focus();
+								alert("Passwords do not match");
+							}
+						}
+					}
+
 		</script>
 </head>
 <body bgcolor="#F5F5F5">

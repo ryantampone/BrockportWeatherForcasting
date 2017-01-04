@@ -58,6 +58,37 @@
 		mysql_free_result($result3);
 
 
+		//--------------------------------------------------------------------------
+
+		$sql4 = "SELECT registrationKey FROM `registrationKeys` WHERE userGroup = 'student';";
+		$result4 = mysql_query($sql4);
+		if (!$result4)
+		{
+			echo "Error retrieving student registration key";
+			exit;
+		}
+		while($row = mysql_fetch_assoc($result4))
+		{
+			$studentKey = $row['registrationKey'];
+		}
+		mysql_free_result($result4);
+
+		//--------------------------------------------------------------------------
+
+		$sql5 = "SELECT registrationKey FROM `registrationKeys` WHERE userGroup = 'coach';";
+		$result5 = mysql_query($sql5);
+		if (!$result5)
+		{
+			echo "Error retrieving coach registration key";
+			exit;
+		}
+		while($row = mysql_fetch_assoc($result5))
+		{
+			$coachKey = $row['registrationKey'];
+		}
+		mysql_free_result($result5);
+
+
 		//Connect to the DB
 		function connect_and_select_db($server, $username, $pwd, $dbname)
 		{
@@ -93,9 +124,45 @@
 	      </div>
 	      <div class='cardBodyContentContainer'>
 	        <div class='cardBodyContent'>
-	          <form action='/brockportforecasting/user_add_ui_form.php'><button >Register User</button></form><br>
-						<form action='/brockportforecasting/user_modifyselect_ui_form.php'><button >Modify User</button></form><br>
-						<form action='/brockportforecasting/user_removeselect_ui_form.php'><button >Remove User</button></form>
+					<center>
+					<form action='update_registrationKeys.php' method='post'>
+					<table cellpadding='5px'>
+						<tr>
+								<th>
+										Student Key
+								</th>
+								<th>
+										Coach Key
+								</th>
+						</tr>
+						<tr>
+								<td>
+										<input name='studentKey' id='studentKey' TYPE='text' value='$studentKey' onKeyPress='hasToBeNumberOrLetter(event)' required/>
+								</td>
+								<td>
+										<input name='coachKey' id='coachKey' TYPE='text' value='$coachKey' onKeyPress='hasToBeNumberOrLetter(event)' required/>
+								</td>
+								<td>
+										<input type='submit' value='Update'/>
+								</td>
+						</tr>
+					</table><br>
+					</form>
+
+					<table>
+	          <tr>
+								<td>
+										<form action='/brockportforecasting/user_add_ui_form.php'><button >Register User</button></form>
+								</td>
+								<td>
+										<form action='/brockportforecasting/user_modifyselect_ui_form.php'><button >Modify User</button></form>
+								</td>
+								<td>
+										<form action='/brockportforecasting/user_removeselect_ui_form.php'><button >Remove User</button></form>
+								</td>
+						<tr>
+					</table>
+					</center>
 	        </div>
 	      </div>
 	    </div>
@@ -159,12 +226,12 @@
 			<div class='cardBody'>
 				<div class='cardHeader'>
 					<div class='cardHeaderTitle'>
-							Submitted Forecasts
+							Reports
 					</div>
 				</div>
 				<div class='cardBodyContentContainer'>
 					<div class='cardBodyContent'>
-						<center><strong>Number of Reports Awaiting Approval: $numberOfReportsAwaitingApproval</strong></center><br>
+						<center><strong>Number of Forecasts Awaiting Approval: $numberOfReportsAwaitingApproval</strong></center><br>
 						<form action='admin_select_forecast_process.php' method='post'>
                 <table align='center'>
                     <tr>
@@ -211,7 +278,23 @@
 			</div>
 
 
-			
+
+			<div class='cardBody'>
+				<div class='cardHeader'>
+					<div class='cardHeaderTitle'>
+							Dashboards
+					</div>
+				</div>
+				<div class='cardBodyContentContainer'>
+					<div class='cardBodyContent'>
+						<form action='/brockportforecasting/studentoptions.php'><button >Student Dashboard</button></form><br>
+						<form action='/brockportforecasting/coachoptions.php'><button >Coach Dashboard</button></form><br>
+					</div>
+				</div>
+			</div>
+
+
+
 		</div>
 		";
 	}
