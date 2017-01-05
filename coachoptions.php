@@ -47,6 +47,8 @@
 	if ((isset($_SESSION['id'])) && ((string)$_SESSION['access'] == 'coach' || (string)$_SESSION['access'] == 'admin'))
 	{
 		echo "
+		<center><h2>Please select a forecast from the dropdown below</h2></center>
+
 		<div class='cardContainer' style='text-align: center'>
 
 			<div class='cardBody'>

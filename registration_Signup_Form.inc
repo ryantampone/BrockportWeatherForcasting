@@ -1,7 +1,7 @@
 <?php
 include 'header.php';
 
-function show_result($userGroup)
+function show_result($userGroup, $regkey)
 {
     echo "
 		<center><h2>Please fill out the user information below</h2></center>
@@ -30,6 +30,7 @@ function show_result($userGroup)
                     </tr>
                 </table>
                 <input TYPE='hidden' name='access' id='access' value='$userGroup'>
+                <input TYPE='hidden' name='registrationKey' id='registrationKey' value='$regkey'/>
                 <p align='center'>
                     <input type='submit' value='Submit'/>
                     <input type='reset' value='Reset'/>

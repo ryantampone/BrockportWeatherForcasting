@@ -15,9 +15,10 @@ function insert_user()
 	$uid = $_POST['uid'];
 	$pwd = $_POST['pwd'];
 	$access = $_POST['access'];
+	$registrationKey = $_POST['registrationKey'];
 	$status = 'Active';
 
-	$insertStmt = "INSERT INTO user (first, last, uid, pwd, access, status) values ( '$firstname', '$lastname', '$uid', '$pwd', '$access', '$status')";
+	$insertStmt = "INSERT INTO user (first, last, uid, pwd, access, registrationKey, status) values ( '$firstname', '$lastname', '$uid', '$pwd', '$access', '$registrationKey', '$status')";
 
 
 	$result = mysql_query($insertStmt);

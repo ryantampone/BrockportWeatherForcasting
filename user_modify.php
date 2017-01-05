@@ -15,9 +15,10 @@ function modify_user()
 	$uid = $_POST['uid'];
 	$pwd = $_POST['pwd'];
 	$access = $_POST['access'];
+		$registrationKey = $_POST['registrationKey'];
 	$status = 'Active';
 
-	$sql_stmt = "UPDATE `user` SET first='$firstname', last='$lastname', uid='$uid', pwd='$pwd', access='$access', status='$status' WHERE id='$id';";
+	$sql_stmt = "UPDATE `user` SET first='$firstname', last='$lastname', uid='$uid', pwd='$pwd', access='$access', registrationKey='$registrationKey', status='$status' WHERE id='$id';";
 
 	$result = mysql_query($sql_stmt);
 	echo $result;

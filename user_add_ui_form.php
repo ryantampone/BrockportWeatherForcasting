@@ -40,6 +40,7 @@
                             </select>
                     </tr>
                 </table>
+								<input TYPE='hidden' name='registrationKey' id='registrationKey' value='addedByAdmin'/>
                 <p align='center'>
                     <input type='submit' value='Submit'/>
                     <input type='reset' value='Reset'/>

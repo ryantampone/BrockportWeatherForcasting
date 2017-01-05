@@ -33,6 +33,7 @@ function show_result($message, $result, $page)
          $lastname = $row['last'];
          $uid = $row['uid'];
          $pwd = $row['pwd'];
+         $registrationKey = $row['registrationKey'];
          $access = $row['access'];
       }
 
@@ -91,6 +92,7 @@ function show_result($message, $result, $page)
                                  </select>
                          </tr>
                      </table>
+                     <input TYPE='hidden' name='registrationKey' id='registrationKey' value='$registrationKey'/>
                      <p align='center'>
                          <input type='submit' value='Submit'/>
                          <input type='reset' value='Reset'/>
@@ -114,6 +116,7 @@ function show_result($message, $result, $page)
        $lastname = $row['last'];
        $uid = $row['uid'];
        $pwd = $row['pwd'];
+       $registrationKey = $row['registrationKey'];
        $access = $row['access'];
 
        //Takes the values from the databse row and puts them as default values in the form
@@ -171,6 +174,7 @@ function show_result($message, $result, $page)
                                </select>
                        </tr>
                    </table>
+                   <input TYPE='hidden' name='registrationKey' id='registrationKey' value='$registrationKey'/>
                    <p align='center'>
                        <input type='submit' value='Submit'/>
                        <input type='reset' value='Reset'/>

@@ -137,16 +137,16 @@
 						</tr>
 						<tr>
 								<td>
-										<input name='studentKey' id='studentKey' TYPE='text' value='$studentKey' onKeyPress='hasToBeNumberOrLetter(event)' required/>
+										<input name='studentKey' id='studentKey' TYPE='text' value='$studentKey' onKeyPress='hasToBeNumberOrLetter(event)' maxlength='20' required/>
 								</td>
 								<td>
-										<input name='coachKey' id='coachKey' TYPE='text' value='$coachKey' onKeyPress='hasToBeNumberOrLetter(event)' required/>
-								</td>
-								<td>
-										<input type='submit' value='Update'/>
+										<input name='coachKey' id='coachKey' TYPE='text' value='$coachKey' onKeyPress='hasToBeNumberOrLetter(event)' maxlength='20' required/>
 								</td>
 						</tr>
-					</table><br>
+					</table>
+					<center>
+									<input type='submit' value='Update'style='margin-bottom: 5px'/>
+					</center>
 					</form>
 
 					<table>

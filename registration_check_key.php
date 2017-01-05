@@ -42,7 +42,7 @@ function search_user()
 		}
 
 		//Display the results
-		show_result($userGroup);
+		show_result($userGroup, $regkey);
 
 		//Free the result set
 		mysql_free_result($result);

@@ -108,7 +108,9 @@ body
   box-shadow: 5px 5px 5px #bdbdbd/*#b6aeae*/;
 }
 #login:hover{
-	box-shadow: 15px 15px 10px #bdbdbd;
+  transition-duration: .1s;
+  transition-timing-function: ease-in-out;
+  box-shadow: 4px 4px 5px grey;
 }
 
 
