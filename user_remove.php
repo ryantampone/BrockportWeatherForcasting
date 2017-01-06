@@ -31,7 +31,6 @@ function modify_user()
 	else
 	{
 	  $message = "User: ($access) $firstname, $lastname removed successfully.";
-
 	}
 
 	show_result($message);

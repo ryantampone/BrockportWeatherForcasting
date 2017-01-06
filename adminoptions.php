@@ -145,14 +145,14 @@
 						</tr>
 					</table>
 					<center>
-									<input type='submit' value='Update'style='margin-bottom: 5px'/>
+									<input type='submit' value='Update Registration Keys' style='margin-bottom: 5px'/>
 					</center>
 					</form>
 
 					<table>
 	          <tr>
 								<td>
-										<form action='/brockportforecasting/user_add_ui_form.php'><button >Register User</button></form>
+										<form action='/brockportforecasting/user_add_ui_form.php'><button >Add User</button></form>
 								</td>
 								<td>
 										<form action='/brockportforecasting/user_modifyselect_ui_form.php'><button >Modify User</button></form>

@@ -8,7 +8,7 @@
 
 		$group = 'test';
 
-		$sql = "SELECT * FROM user WHERE uid='$uid' AND pwd='$pwd'";
+		$sql = "SELECT * FROM user WHERE uid='$uid' AND pwd='$pwd' AND status='Active'";
 		$result = $conn->query($sql);
 
 		if(!$row = mysqli_fetch_assoc($result))
@@ -16,7 +16,7 @@
 			//echo "Your username or password is incorrect";
 
 			echo "<SCRIPT LANGUAGE='JavaScript'>
-				 window.alert('Your username or password is incorrect')
+				 window.alert('Unable to login: Check your NetID and password and try again or signup for an account')
 				 window.location.href='../index.php';
 				 </SCRIPT>";
 

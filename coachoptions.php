@@ -7,8 +7,9 @@
 
 	require('db_cn.inc');
 	connect_and_select_db(DB_SERVER, DB_UN,DB_PWD,DB_NAME);
+	$todaysDate = date("Y-m-d");
 
-	$sql3 = "SELECT COUNT(*) FROM `forecasts` WHERE STATUS = 'approved';";
+	$sql3 = "SELECT COUNT(*) FROM `forecasts` WHERE status = 'approved' AND dateofgame >= '$todaysDate';";
 	$result3 = mysql_query($sql3);
 	if (!$result3)
 	{
@@ -17,6 +18,7 @@
 	}
 	while($row = mysql_fetch_assoc($result3))
 	{
+		$numberOfReportsApproved = $row['COUNT(*)'];
 		$numberOfReportsApproved = $row['COUNT(*)'];
 	}
 	mysql_free_result($result3);
@@ -68,7 +70,7 @@
 
 
 													connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
-													$sql = "SELECT * FROM `forecasts` WHERE status = 'approved' ORDER BY 'id';";
+													$sql = "SELECT * FROM `forecasts` WHERE status = 'approved' AND dateofgame >= '$todaysDate' ORDER BY 'id';";
 													$result = mysql_query($sql);
 													if (!$result)
 													{
