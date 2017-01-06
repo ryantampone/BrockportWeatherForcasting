@@ -53,15 +53,16 @@ function removeUsers($result)
 
 		   if (!$result2)
 		   {
-		       $message2 = "Error removing User ($uid): ". mysql_error();
+		       $message2 = "Error removing User ($uid)- ". mysql_error()." : ";
 		   }
 		   else
 		   {
+				 	$message2 = "";
 				 	$countRemoved = $countRemoved +1;
 		      //$message2 = "User: ($access) $firstname, $lastname removed successfully.";
 		   }
 
-		   $fullmessage = $message2.' : '.$countRemoved.'users removed successfully';
+		   $fullmessage = $message2.$countRemoved.' users removed successfully';
 		}
 		  	show_result($fullmessage);
 }
