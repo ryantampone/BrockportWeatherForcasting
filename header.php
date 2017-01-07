@@ -107,7 +107,7 @@
 						}
 					}
 
-					function checkpwds()
+					function checkpwds()//checks to make sure passwords are identical
 					{
 						var pwd1 = document.getElementById("pwd").value;
 						var pwd2 = document.getElementById("pwdcheck").value;

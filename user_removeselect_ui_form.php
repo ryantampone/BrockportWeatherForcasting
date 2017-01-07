@@ -54,7 +54,7 @@
 										<td><span align='right'>Registration Key:</span></td>
 										<td><select id='registrationKey' name='registrationKey'>";
 
-											$sql = "SELECT DISTINCT registrationKey FROM `user` WHERE status='Active' ORDER BY 'registrationKey';";
+											$sql = "SELECT DISTINCT registrationKey FROM `user` WHERE status='Active' AND registrationKey!='developer' ORDER BY 'registrationKey';";
 											$result = mysql_query($sql);
 											if (!$result)
 											{
