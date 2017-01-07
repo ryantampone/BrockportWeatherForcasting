@@ -44,6 +44,15 @@
 						return true;
 					}
 
+					function isTime(evt)
+					{
+						var charCode = (evt.which) ? evt.which : event.keycode
+						if ((charCode > 31 && (charCode < 58 || charCode > 58)) && (charCode > 31 && (charCode < 48 || charCode > 57)) && (charCode > 31 && (charCode < 65 || charCode > 90)) &&
+							(charCode > 31 && (charCode < 97 || charCode > 122)))
+							return false;
+						return true;
+					}
+
 					function isTextNameKey(evt)
 					{
 						var charCode = (evt.which) ? evt.which : event.keycode
@@ -57,7 +66,16 @@
 					{
 						var charCode = (evt.which) ? evt.which : event.keycode
 						if  ((charCode > 31 && (charCode < 65 || charCode > 90)) && (charCode > 31 && (charCode < 97 || charCode > 122)) && (charCode > 31 && (charCode < 45 || charCode > 45)) && (charCode > 31 && (charCode < 32 || charCode > 32)) &&
-						(charCode > 31 && (charCode < 39 && charCode > 39)) && (charCode > 31 && (charCode < 92 && charCode > 92)))
+						(charCode > 31 && (charCode < 39 || charCode > 39)) && (charCode > 31 && (charCode < 92 || charCode > 92)))
+							return false;
+						return true;
+					}
+
+					function isKey(evt)
+					{
+						var charCode = (evt.which) ? evt.which : event.keycode
+						if ((charCode > 31 && (charCode < 65 || charCode > 90)) && (charCode > 31 && (charCode < 97 || charCode > 122)) && (charCode > 31 && (charCode < 48 || charCode > 58)) &&
+						(charCode > 31 && (charCode < 45 || charCode > 45)) && (charCode > 31 && (charCode < 46 || charCode > 46)) && (charCode > 31 && (charCode < 95 || charCode > 95)))
 							return false;
 						return true;
 					}
