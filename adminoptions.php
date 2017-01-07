@@ -4,7 +4,7 @@
 		<link href='/brockportforecasting/css/cardStyles.css' type='text/css' rel='stylesheet' />
 		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 	";
-	
+
 
 		require('db_cn.inc');
 		connect_and_select_db(DB_SERVER, DB_UN,DB_PWD,DB_NAME);
@@ -200,7 +200,7 @@
 											<input name='email1' id='email1' TYPE='text'  value='$fmemail' required/>
 									</td>
 									<td>
-											<input name='phone1' id='phone1' TYPE='text' SIZE='14' onblur='isPhoneNumber1()' value='$fmphone'/>
+											<input name='phone1' id='phone1' TYPE='text' SIZE='12' onblur='isPhoneNumber1()' value='$fmphone'/>
 									</td>
 							</tr>
 							<tr>
@@ -211,7 +211,7 @@
 											<input name='email2' id='email2' TYPE='text' value='$hfemail' required/>
 									</td>
 									<td>
-											<input name='phone2' id='phone2' TYPE='text' SIZE='14' onblur='isPhoneNumber2()' value='$hfphone'/>
+											<input name='phone2' id='phone2' TYPE='text' SIZE='12' onblur='isPhoneNumber2()' value='$hfphone'/>
 									</td>
 							</tr>
 						</table>
