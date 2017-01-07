@@ -80,6 +80,14 @@
 						return true;
 					}
 
+					function isEmail(evt)
+					{
+						var charCode = (evt.which) ? evt.which : event.keycode
+						if ((charCode > 31 && (charCode < 47 || charCode > 47)) && (charCode > 31 && (charCode < 39 || charCode > 39)) && (charCode > 31 && (charCode < 92 || charCode > 92)))
+							return true;
+						return false;
+					}
+
 					function isPhoneNumber1()
 					{
 						var phonenumber = document.getElementById("phone1").value;

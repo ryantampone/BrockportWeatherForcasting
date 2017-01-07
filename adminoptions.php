@@ -138,10 +138,10 @@
 						</tr>
 						<tr>
 								<td>
-										<input name='studentKey' id='studentKey' TYPE='text' value='$studentKey' onKeyPress='hasToBeNumberOrLetter(event)' maxlength='20' required/>
+										<input name='studentKey' id='studentKey' TYPE='text' value='$studentKey' onKeyPress='return isKey(event)' onpaste='return false' maxlength='20' required/>
 								</td>
 								<td>
-										<input name='coachKey' id='coachKey' TYPE='text' value='$coachKey' onKeyPress='hasToBeNumberOrLetter(event)' maxlength='20' required/>
+										<input name='coachKey' id='coachKey' TYPE='text' value='$coachKey' onKeyPress='return isKey(event)' onpaste='return false' maxlength='20' required/>
 								</td>
 						</tr>
 					</table>
@@ -197,10 +197,10 @@
 											<span align='right'>Faculty:</span>
 									</td>
 									<td>
-											<input name='email1' id='email1' TYPE='text'  value='$fmemail' required/>
+											<input name='email1' id='email1' TYPE='text' onKeyPress='return isEmail(event)' value='$fmemail' required/>
 									</td>
 									<td>
-											<input name='phone1' id='phone1' TYPE='text' SIZE='12' onblur='isPhoneNumber1()' value='$fmphone'/>
+											<input name='phone1' id='phone1' TYPE='text' SIZE='14' onblur='isPhoneNumber1()' value='$fmphone'/>
 									</td>
 							</tr>
 							<tr>
@@ -208,10 +208,10 @@
 											<span align='right'>Forecaster:</span>
 									</td>
 									<td>
-											<input name='email2' id='email2' TYPE='text' value='$hfemail' required/>
+											<input name='email2' id='email2' TYPE='text'  onKeyPress='return isEmail(event)' value='$hfemail' required/>
 									</td>
 									<td>
-											<input name='phone2' id='phone2' TYPE='text' SIZE='12' onblur='isPhoneNumber2()' value='$hfphone'/>
+											<input name='phone2' id='phone2' TYPE='text' SIZE='14' onblur='isPhoneNumber2()' value='$hfphone'/>
 									</td>
 							</tr>
 						</table>
