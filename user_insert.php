@@ -13,7 +13,8 @@ function insert_user()
 	$firstname = $_POST['firstname'];
 	$lastname = $_POST['lastname'];
 	$uid = $_POST['uid'];
-	$pwd = $_POST['pwd'];
+	$password = $_POST['pwd'];
+	$pwd = password_hash($password, PASSWORD_DEFAULT); //creates an encrypted password
 	$access = $_POST['access'];
 	$registrationKey = $_POST['registrationKey'];
 	$status = 'Active';

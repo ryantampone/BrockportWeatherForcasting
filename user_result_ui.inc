@@ -32,7 +32,7 @@ function show_result($message, $result, $page)
          $firstname = $row['first'];
          $lastname = $row['last'];
          $uid = $row['uid'];
-         $pwd = $row['pwd'];
+         $pwd = $row['pwd'];//This is the encrypted form
          $registrationKey = $row['registrationKey'];
          $access = $row['access'];
       }
