@@ -182,7 +182,7 @@
 						<table cellpadding='5px'>
 							<tr>
 									<th>
-											Contact Person
+											Contact
 									</th>
 									<th>
 											Email
@@ -193,24 +193,24 @@
 							</tr>
 							<tr>
 									<td>
-											Faculty Member:
+											<span align='right'>Faculty:</span>
 									</td>
 									<td>
-											<input name='email1' id='email1' TYPE='text' value='$fmemail' required/>
+											<input name='email1' id='email1' TYPE='text'  value='$fmemail' required/>
 									</td>
 									<td>
-											<input name='phone1' id='phone1' TYPE='text' onblur='isPhoneNumber1()' value='$fmphone'/>
+											<input name='phone1' id='phone1' TYPE='text' SIZE='14' onblur='isPhoneNumber1()' value='$fmphone'/>
 									</td>
 							</tr>
 							<tr>
 									<td>
-											Head Forecaster:
+											<span align='right'>Forecaster:</span>
 									</td>
 									<td>
 											<input name='email2' id='email2' TYPE='text' value='$hfemail' required/>
 									</td>
 									<td>
-											<input name='phone2' id='phone2' TYPE='text' onblur='isPhoneNumber2()' value='$hfphone'/>
+											<input name='phone2' id='phone2' TYPE='text' SIZE='14' onblur='isPhoneNumber2()' value='$hfphone'/>
 									</td>
 							</tr>
 						</table>
@@ -231,48 +231,59 @@
 				</div>
 				<div class='cardBodyContentContainer'>
 					<div class='cardBodyContent'>
-						<center><strong>Number of Forecasts Awaiting Approval: $numberOfReportsAwaitingApproval</strong></center><br>
-						<form action='admin_select_forecast_process.php' method='post'>
-                <table align='center'>
-                    <tr>
-                        <td><span align='right'>Forecast:</span></td>
-                        <td><select id='forecast' name='forecast'>";
+						<center><strong>Number of Forecasts Awaiting Approval: $numberOfReportsAwaitingApproval</strong></center><br>";
+						if ($numberOfReportsAwaitingApproval != 0)
+						{
+							echo"
+								<form action='admin_select_forecast_process.php' method='post'>
+		                <table align='center'>
+		                    <tr>
+		                        <td><span align='right'>Forecast:</span></td>
+		                        <td><select id='forecast' name='forecast'>";
 
 
-													connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
-													$sql = "SELECT * FROM `forecasts` WHERE status = 'awaitingApproval' ORDER BY 'id';";
-													$result = mysql_query($sql);
-													if (!$result)
-													{
-														$message = "Error! Unable to get forecasts from the Database: ".mysql_error();
-														echo "<SCRIPT LANGUAGE='JavaScript'>
-															 window.alert('$message')
-															 window.location.href='index.php';
-															 </SCRIPT>";
-														exit;
-													}
-													while ($row = mysql_fetch_assoc($result))
-													{
-														$id = $row['id'];
-														$sport = $row['sport'];
-														$forecast = $row['forecast'];
-														$forecasterfn = $row['forecasterfn'];
-														$forecasterfn = $row['forecasterfn'];
-														$name = $forecasterfn.', '.$forecasterln;
-														$option = $id.': '.$sport.', '.$forecast;
+															connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
+															$sql = "SELECT * FROM `forecasts` WHERE status = 'awaitingApproval' ORDER BY 'id';";
+															$result = mysql_query($sql);
+															if (!$result)
+															{
+																$message = "Error! Unable to get forecasts from the Database: ".mysql_error();
+																echo "<SCRIPT LANGUAGE='JavaScript'>
+																	 window.alert('$message')
+																	 window.location.href='index.php';
+																	 </SCRIPT>";
+																exit;
+															}
+															while ($row = mysql_fetch_assoc($result))
+															{
+																$id = $row['id'];
+																$sport = $row['sport'];
+																$forecast = $row['forecast'];
+																$forecasterfn = $row['forecasterfn'];
+																$forecasterfn = $row['forecasterfn'];
+																$name = $forecasterfn.', '.$forecasterln;
+																$option = $id.': '.$sport.', '.$forecast;
 
-														echo "<option value='$id'>".$option."</option>";
-													}
+																echo "<option value='$id'>".$option."</option>";
+															}
 
-												echo "
-												</td>
-                    </tr>
-                </table>
-								<input TYPE='hidden' name='page' id='page' SIZE='50' value='userModifySearch'/>
-                <p align='center'>
-                    <input type='submit' value='Review and Approve Selected Forecast'/>
-                </p>
-            </form>
+														echo "
+														</td>
+		                    </tr>
+		                </table>
+										<input TYPE='hidden' name='page' id='page' SIZE='50' value='userModifySearch'/>
+		                <p align='center'>
+		                    <input type='submit' value='Review and Approve Selected Forecast'/>
+		                </p>
+		            </form>
+								";
+						}
+						else
+						{
+							echo "<br><center>No reports to review :)</center><br>";
+						}
+
+						echo "
 					</div>
 				</div>
 			</div>

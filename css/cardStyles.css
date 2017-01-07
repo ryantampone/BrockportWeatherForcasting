@@ -1,6 +1,6 @@
 div.cardBody
 {
-  min-height: 250px;
+  min-height: 260px;
   width: 450px;
   margin: 20px;
   background-color: white;
@@ -26,7 +26,7 @@ div.cardBodyContentContainer
 
 div.cardBodyContent
 {
-
+  table-layout: fixed;
 }
 
 div.cardHeader

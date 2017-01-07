@@ -49,6 +49,9 @@
 	if ((isset($_SESSION['id'])) && ((string)$_SESSION['access'] == 'coach' || (string)$_SESSION['access'] == 'admin'))
 	{
 		echo "
+		<div class='ellsworthimg'>
+			<img src='src/Ellsworth2.png' alt='Ellsworth Mascot' style='  position: absolute; right: 0px; bottom: 0px;'>
+		</div>
 		<center><h2>Please select a forecast from the dropdown below</h2></center>
 
 		<div class='cardContainer' style='text-align: center'>
