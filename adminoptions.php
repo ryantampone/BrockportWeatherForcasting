@@ -4,6 +4,7 @@
 		<link href='/brockportforecasting/css/cardStyles.css' type='text/css' rel='stylesheet' />
 		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 	";
+	
 
 		require('db_cn.inc');
 		connect_and_select_db(DB_SERVER, DB_UN,DB_PWD,DB_NAME);
