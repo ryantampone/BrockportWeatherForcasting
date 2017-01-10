@@ -1,10 +1,8 @@
 <?php
-
 require('db_cn.inc');
 require('forecast_submit_result_ui.inc');
 
 submit_forecast();
-
 function submit_forecast()
 {
 	connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
@@ -22,20 +20,20 @@ function submit_forecast()
 	$discussion = $_POST['discussion'];
 	$forecasterfn = $_POST['forecasterfn'];
 	$forecasterln = $_POST['forecasterln'];
+	$netID = $_POST['netID'];
 	$datesubmitted = date('Y-m-d');
 	$status = 'awaitingApproval';
 
-	$insertStmt = "INSERT INTO `forecasts` (dateofgame, timeofgame, sport, location, forecast, temphigh, templow, windspeed, winddirection, chanceofrain, discussion, forecasterfn, forecasterln, datesubmitted, status) values ('$gamedate', '$gametime', '$sport', '$location', '$forecast', '$temperaturehigh', '$temperaturelow', '$windspeed', '$winddirection', '$chanceofrain', '$discussion', '$forecasterfn', '$forecasterln', '$datesubmitted', '$status')";
 
-
+	$insertStmt = "INSERT INTO forecasts (dateofgame, timeofgame, sport, location, forecast, temphigh, templow, windspeed, winddirection, chanceofrain, discussion, forecasterfn, forecasterln, netID, datesubmitted, status) values ('$gamedate', '$gametime', '$sport', '$location', '$forecast', '$temperaturehigh', '$temperaturelow', '$windspeed', '$winddirection', '$chanceofrain', '$discussion', '$forecasterfn', '$forecasterln', '$netID', '$datesubmitted', '$status');";
 	$result = mysql_query($insertStmt);
 	echo $result;
 	$message = "";
 
 	if (!$result)
 	{
-  	  $message = "Error Submitting Forecast ($forecast): ". mysql_error();
-			$statusFlag = "error";
+  	$message = "Error Submitting Forecast ($forecast): ". mysql_error();
+		$statusFlag = "error";
 	}
 	else
 	{
@@ -77,6 +75,7 @@ function submit_forecast()
 		$hfphone = $row['phone'];
 	}
 	mysql_free_result($result1);
+
 
 	if ($fmphone != "")
 	{

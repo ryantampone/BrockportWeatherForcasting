@@ -40,6 +40,7 @@
 					$_SESSION['access'] = $row['access'];
 					$_SESSION['first'] = $row['first'];
 					$_SESSION['last'] = $row['last'];
+					$_SESSION['uid'] = $row['uid'];
 					$group = $row['access'];
 				}
 		 }

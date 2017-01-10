@@ -6,8 +6,7 @@
 <?php
 	if ((isset($_SESSION['id'])) && ((string)$_SESSION['access'] == 'student' || (string)$_SESSION['access'] == 'admin'))
 	{
-		echo
-			"
+		echo "
 			<center><h2>Please enter your forecast data</h2></center>
 				<form action='student_submit_forecast.php' method='post'>
 						<table align='center'>
@@ -86,13 +85,14 @@
 								</tr>
 								<tr>
 										<td><span align='right'>Forecaster First Name:</span></td>
-										<td><input name='forecasterfn' id='forecasterfn' TYPE='text' SIZE='50' placeholder='e.g. Jane' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' maxlength='25' required/></td>
+										<td><input name='forecasterfn' id='forecasterfn' TYPE='text' SIZE='50' placeholder='e.g. Jane' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' maxlength='25' value='$firstName' required/></td>
 								</tr>
 								<tr>
 										<td><span align='right'>Forecaster Last Name:</span></td>
-										<td><input name='forecasterln' id='forecasterln' TYPE='text' SIZE='50' placeholder='e.g. Doe' onKreyPress='return isTextCityOrPersonKey(event)' onpaste='return false' maxlength='25' required/></td>
+										<td><input name='forecasterln' id='forecasterln' TYPE='text' SIZE='50' placeholder='e.g. Doe' onKreyPress='return isTextCityOrPersonKey(event)' onpaste='return false' maxlength='25' value='$lastName' required/></td>
 								</tr>
 						</table>
+						<input name='netID' id='netID' TYPE='hidden' value='$netID'/>
 						<p align='center'>
 								<input type='submit' value='Submit'/>
 								<input type='reset' value='Reset'/>

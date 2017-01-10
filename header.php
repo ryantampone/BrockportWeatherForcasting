@@ -174,6 +174,7 @@
 														$firstName = (string)$_SESSION['first'];
 														$lastName = (string)$_SESSION['last'];
 														$access = (string)$_SESSION['access'];
+														$netID = (string)$_SESSION['uid'];
                             if (isset($_SESSION['id']))
 														{
 																echo "<a href='index.php'>$firstName $lastName's $access dashboard</a> </li><li>";
