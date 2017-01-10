@@ -17,15 +17,15 @@
                 <table align='center'>
                     <tr>
                         <td><span align='right'>First Name:</span></td>
-                        <td><input name='firstname' id='firstname' TYPE='text' SIZE='50' isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
+                        <td><input name='firstname' id='firstname' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
                     </tr>
                     <tr>
                         <td><span align='right'>Last Name:</span></td>
-                        <td><input name='lastname' id='lastname' TYPE='text' SIZE='50' isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
+                        <td><input name='lastname' id='lastname' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
                     </tr>
                     <tr>
                         <td><span align='right'>Username:</span></td>
-                        <td><input name='uid' id='uid' TYPE='text' SIZE='50' isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
+                        <td><input name='uid' id='uid' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
                     </tr>
                     <tr>
                         <td><span align='right'>Password:</span></td>
