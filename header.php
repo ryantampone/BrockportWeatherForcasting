@@ -178,9 +178,8 @@
                             if (isset($_SESSION['id']))
 														{
 																echo "<a href='index.php'>$firstName $lastName's $access dashboard</a> </li><li>";
-                                echo"<form action='login/logout.php'>
-                                        <button >Logout</button>
-                                    </form>";
+																echo "<a href='changepassword.php'>Change Password</a> </li><li>";
+																echo "<a href='login/logout.php'>Logout</a> </li><li>";
                             }
 														else
 														{
