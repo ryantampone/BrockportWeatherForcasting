@@ -20,7 +20,8 @@ function submit_forecast()
 	$temperaturelow = $_POST['temperaturelow'];
 	$windspeed = $_POST['windspeed'].' MPH';
 	$winddirection = $_POST['winddirection'];
-	$chanceofrain = $_POST['chanceofrain'];
+	$chanceofprecipitation = $_POST['chanceofprecipitation'];
+	$amountofprecipitation = $_POST['amountofprecipitation'];
 	$discussion = $_POST['discussion'];
 	$forecasterfn = $_POST['forecasterfn'];
 	$forecasterln = $_POST['forecasterln'];
@@ -29,7 +30,7 @@ function submit_forecast()
 
 	$insertStmt = "UPDATE `forecasts` SET dateofgame='$gamedate', timeofgame='$gametime', sport='$sport', location='$location',
 	forecast='$forecast', temphigh='$temperaturehigh', templow='$temperaturelow', windspeed='$windspeed', winddirection='$winddirection',
-	chanceofrain='$chanceofrain', discussion='$discussion', forecasterfn='$forecasterfn', forecasterln='$forecasterln', datesubmitted='$datesubmitted', status='$status' WHERE id='$forecastid'";
+	chanceofprecipitation='$chanceofprecipitation', amountofprecipitation='$amountofprecipitation', discussion='$discussion', forecasterfn='$forecasterfn', forecasterln='$forecasterln', datesubmitted='$datesubmitted', status='$status' WHERE id='$forecastid'";
 
 
 	$result = mysql_query($insertStmt);

@@ -159,7 +159,7 @@
    		<img src="src/Ellsworth.png" alt="Ellisworth Logo" align="right" style="width:;height:128px;">
 
 
-		<h1 align="center" style="text-shadow: 0 0 4px #FFD405;"><font color='#002B21'>Brockport Golden Eagle Forecast</font></h1>
+		<h1 align="center" style="text-shadow: 0 0 4px #FFD405;"><font color='#002B21'>Brockport Golden Eagle Forecasting</font></h1>
         <p id="dateToDisplay" align="center"  style="font-size:25px; color:#00533E"></p>
         <script>
 			var date = new Date();

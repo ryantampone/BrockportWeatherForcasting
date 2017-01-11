@@ -77,7 +77,11 @@
 							<table align='center'>
 								<tr>
 										<td><span align='right'>Chance of Precipitation:</span></td>
-										<td><input name='chanceofrain' id='chanceofrain' TYPE='text' placeholder='e.g. 50 (% will be added automatically)' SIZE='50' maxlength='3' onKeyPress='return hasToBeNumber(event)' onpaste='return false' required/></td>
+										<td><input name='chanceofprecipitation' id='chanceofprecipitation' TYPE='text' placeholder='e.g. 50 (% will be added automatically)' SIZE='50' maxlength='3' onKeyPress='return hasToBeNumber(event)' onpaste='return false' required/></td>
+								</tr>
+								<tr>
+										<td><span align='right'>Amount of Precipitation:</span></td>
+										<td><input name='amountofprecipitation' id='amountofprecipitation' TYPE='text' SIZE='50' required/></td>
 								</tr>
 								<tr>
 										<td><span align='right'>Forecast Discussion:</span></td>

@@ -16,7 +16,8 @@ function submit_forecast()
 	$temperaturelow = $_POST['temperaturelow'];
 	$windspeed = $_POST['windspeed'];
 	$winddirection = $_POST['winddirection'];
-	$chanceofrain = $_POST['chanceofrain'];
+	$chanceofprecipitation = $_POST['chanceofprecipitation'];
+	$amountofprecipitation = $_POST['amountofprecipitation'];
 	$discussion = $_POST['discussion'];
 	$forecasterfn = $_POST['forecasterfn'];
 	$forecasterln = $_POST['forecasterln'];
@@ -25,7 +26,7 @@ function submit_forecast()
 	$status = 'awaitingApproval';
 
 
-	$insertStmt = "INSERT INTO forecasts (dateofgame, timeofgame, sport, location, forecast, temphigh, templow, windspeed, winddirection, chanceofrain, discussion, forecasterfn, forecasterln, netID, datesubmitted, status) values ('$gamedate', '$gametime', '$sport', '$location', '$forecast', '$temperaturehigh', '$temperaturelow', '$windspeed', '$winddirection', '$chanceofrain', '$discussion', '$forecasterfn', '$forecasterln', '$netID', '$datesubmitted', '$status');";
+	$insertStmt = "INSERT INTO forecasts (dateofgame, timeofgame, sport, location, forecast, temphigh, templow, windspeed, winddirection, chanceofprecipitation, amountofprecipitation, discussion, forecasterfn, forecasterln, netID, datesubmitted, status) values ('$gamedate', '$gametime', '$sport', '$location', '$forecast', '$temperaturehigh', '$temperaturelow', '$windspeed', '$winddirection', '$chanceofprecipitation', '$amountofprecipitation', '$discussion', '$forecasterfn', '$forecasterln', '$netID', '$datesubmitted', '$status');";
 	$result = mysql_query($insertStmt);
 	echo $result;
 	$message = "";

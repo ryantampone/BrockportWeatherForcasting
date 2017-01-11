@@ -24,7 +24,8 @@ function show_result($message, $result, $forecastid, $statusFlag)
           $templow = $row['templow'];
           $windspeed = $row['windspeed'];
           $winddirection = $row['winddirection'];
-          $chanceofrain = $row['chanceofrain'];
+          $chanceofprecipitation = $row['chanceofprecipitation'];
+          $amountofprecipitation = $row['amountofprecipitation'];
           $discussion = $row['discussion'];
           $forecasterfn = $row['forecasterfn'];
           $forecasterln = $row['forecasterln'];
@@ -74,7 +75,11 @@ function show_result($message, $result, $forecastid, $statusFlag)
                     </tr>
                     <tr>
                         <td><span align='right'>Chance of Precipitation:</span></td>
-                        <td><input name='chanceofrain' id='chanceofrain' TYPE='text' placeholder='e.g. 50 (% will be added automatically)' SIZE='50' maxlength='3' onKeyPress='hasToBeNumber(event)' onpaste='return false' value='$chanceofrain' required/></td>
+                        <td><input name='chanceofprecipitation' id='chanceofprecipitation' TYPE='text' placeholder='e.g. 50 (% will be added automatically)' SIZE='50' maxlength='3' onKeyPress='hasToBeNumber(event)' onpaste='return false' value='$chanceofprecipitation' required/></td>
+                    </tr>
+                    <tr>
+                        <td><span align='right'>Amount of Precipitation:</span></td>
+                        <td><input name='amountofprecipitation' id='amountofprecipitation' TYPE='text' SIZE='50' maxlength='3' onKeyPress='hasToBeNumber(event)' onpaste='return false' value='$amountofprecipitation' required/></td>
                     </tr>
                     <tr>
                         <td><span align='right'>Forecast Discussion:</span></td>

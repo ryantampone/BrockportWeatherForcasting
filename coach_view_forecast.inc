@@ -25,7 +25,8 @@ function show_result($message, $result, $forecastid, $statusFlag)
           $templow = $row['templow'];
           $windspeed = $row['windspeed'];
           $winddirection = $row['winddirection'];
-          $chanceofrain = $row['chanceofrain'];
+          $chanceofprecipitation = $row['chanceofprecipitation'];
+          $amountofprecipitation = $row['amountofprecipitation'];
           $discussion = $row['discussion'];
           $forecasterfn = $row['forecasterfn'];
           $forecasterln = $row['forecasterln'];
@@ -54,7 +55,11 @@ function show_result($message, $result, $forecastid, $statusFlag)
                     </tr>
                     <tr>
                       <td><span align='right'><u>Chance of Precipitation:</u></span></td>
-                      <td><span align='right'><strong><font color='#00543F'>$chanceofrain %</font></strong></span></td>
+                      <td><span align='right'><strong><font color='#00543F'>$chanceofprecipitation %</font></strong></span></td>
+                    </tr>
+                    <tr>
+                      <td><span align='right'><u>Amount of Precipitation:</u></span></td>
+                      <td><span align='right'><strong><font color='#00543F'>$amountofprecipitation</font></strong></span></td>
                     </tr>
                     <tr>
                       <td><span align='right'><u>Forecast Discussion:</u></span></td>
