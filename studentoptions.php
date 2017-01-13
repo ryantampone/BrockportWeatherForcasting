@@ -81,7 +81,7 @@
 								</tr>
 								<tr>
 										<td><span align='right'>Amount of Precipitation:</span></td>
-										<td><input name='amountofprecipitation' id='amountofprecipitation' TYPE='text' SIZE='50' required/></td>
+										<td><input name='amountofprecipitation' id='amountofprecipitation' TYPE='text' placeholder='e.g. 2 (need to automatically add inches unit)' onKeyPress='return isEmail()' TYPE='text' SIZE='50' required/></td>
 								</tr>
 								<tr>
 										<td><span align='right'>Forecast Discussion:</span></td>
