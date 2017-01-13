@@ -27,11 +27,11 @@ function modify_user()
 
 	if (!$result)
 	{
-  	  $message = "Error in updating User: ($access) $firstname, $lastname: ". mysql_error();
+  	  $message = "Error in updating User: ($access) $lastname, $firstname: ". mysql_error();
 	}
 	else
 	{
-	  $message = "Data for User: ($access) $firstname, $lastname updated successfully.";
+	  $message = "Data for User: ($access) $lastname, $firstname updated successfully.";
 
 	}
 
