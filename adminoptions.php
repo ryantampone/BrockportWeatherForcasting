@@ -150,6 +150,8 @@
 					</center>
 					</form>
 
+					<hr style='width:50%'>
+
 					<table>
 	          <tr>
 								<td>
@@ -164,6 +166,7 @@
 						<tr>
 					</table>
 					</center>
+					<br>
 	        </div>
 	      </div>
 	    </div>
@@ -274,9 +277,10 @@
 		                </table>
 										<input TYPE='hidden' name='page' id='page' SIZE='50' value='userModifySearch'/>
 		                <p align='center'>
-		                    <input type='submit' value='Review and Approve Selected Forecast'/>
+		                    <input type='submit' value='Review and Approve Selected Forecast'/><br
 		                </p>
 		            </form>
+								<center><form action='/brockportforecasting/forecast_student_select.php'><button >Past Reports</button></form></center>
 								";
 						}
 						else
@@ -288,7 +292,6 @@
 					</div>
 				</div>
 			</div>
-
 
 
 			<div class='cardBody'>
