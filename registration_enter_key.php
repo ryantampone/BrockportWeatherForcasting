@@ -14,7 +14,7 @@
 	else
 	{
 		echo "
-		<center><h2>Please enter your registration key provided by your instuctor</h2></center>
+		<center><h2>Please enter the registration key provided by your instuctor</h2></center>
 			<div id='userdataform'>
 						<form action='registration_check_key.php' method='post'>
 								<table align='center'>
