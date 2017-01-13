@@ -1,5 +1,9 @@
 <?php
 include 'header.php';
+echo "
+  <link href='/brockportforecasting/css/cardStyles.css' type='text/css' rel='stylesheet' />
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+";
 
 function show_result($message, $result, $page)
 {
@@ -46,15 +50,15 @@ function show_result($message, $result, $page)
                      <table align='center'>
                          <tr>
                              <td><span align='right'>First Name:</span></td>
-                             <td><input name='firstname' id='firstname' TYPE='text' SIZE='50' value='$firstname' isTextCityOrPersonKey(event) onpaste='return false' required/></td>
+                             <td><input name='firstname' id='firstname' TYPE='text' SIZE='50' value='$firstname' onKeyPress='return isTextCityOrPersonKey(event) onpaste='return false' required/></td>
                          </tr>
                          <tr>
                              <td><span align='right'>Last Name:</span></td>
-                             <td><input name='lastname' id='lastname' TYPE='text' SIZE='50' value='$lastname' isTextCityOrPersonKey(event) onpaste='return false' required/></td>
+                             <td><input name='lastname' id='lastname' TYPE='text' SIZE='50' value='$lastname' onKeyPress='return isTextCityOrPersonKey(event) onpaste='return false' required/></td>
                          </tr>
                          <tr>
                              <td><span align='right'>Username:</span></td>
-                             <td><input name='uid' id='uid' TYPE='text' SIZE='50' value='$uid' style=\"background-color: #d6dbdf;\" readonly required/></td>
+                             <td><input name='uid' id='uid' TYPE='text' SIZE='50' value='$uid' onKeyPress='return isTextCityOrPersonKey(event)' style=\"background-color: #d6dbdf;\" readonly required/></td>
                          </tr>
                          <tr>
                              <td><span align='right'>Password:</span></td>
