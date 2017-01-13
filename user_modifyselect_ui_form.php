@@ -17,7 +17,7 @@
                 <table align='center'>
                     <tr>
                         <td><span align='right'>UserID:</span></td>
-                        <td><input name='uid' id='uid' TYPE='text' SIZE='50' required/></td>
+                        <td><input name='uid' id='uid' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' required/></td>
                     </tr>
                 </table>
 								<input TYPE='hidden' name='page' id='page' SIZE='50' value='userModifySearch'/>
