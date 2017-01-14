@@ -33,36 +33,44 @@
 	if ((isset($_SESSION['id'])) && ((string)$_SESSION['access'] == 'admin'))
 	{
 		echo "
-			<center><h2>Select a student to view their forecasts</h2>
-			<form action='forecast_student_select_process.php' method='post'>
-			<select id='student' name='student'>";
-				$sql = "SELECT * FROM `user` WHERE status='Active' AND access='student' ORDER BY 'first' ASC;";
-				$result = mysql_query($sql);
-				if (!$result)
-				{
-					$message = "Error! Unable to get students from the Database: ".mysql_error();
-					echo "<SCRIPT LANGUAGE='JavaScript'>
-						 window.alert('$message')
-						 window.location.href='index.php';
-						 </SCRIPT>";
-					exit;
-				}
-				while ($row = mysql_fetch_assoc($result))
-				{
-					$firstname = $row['first'];
-					$lastname = $row['last'];
-					$uid = $row['uid'];
+		<center><h2>Select a student to view their forecasts</h2>
+		<form action='forecast_student_select_process.php' method='post'>
+				<table align='center'>
+						<tr>
+								<td><span align='right'>Student:</span></td>
+								<td><select id='student' name='student'>";
 
-					$option = $firstname.', '.$lastname;
+									$sql = "SELECT * FROM `user` WHERE status='Active' AND (access='student' OR access='admin') ORDER BY first ASC;";
+									$result = mysql_query($sql);
+									if (!$result)
+									{
+										$message = "Error! Unable to get students from the Database: ".mysql_error();
+										echo "<SCRIPT LANGUAGE='JavaScript'>
+											 window.alert('$message')
+											 window.location.href='index.php';
+											 </SCRIPT>";
+										exit;
+									}
+									while ($row = mysql_fetch_assoc($result))
+									{
+										$firstname = $row['first'];
+										$lastname = $row['last'];
+										$uid = $row['uid'];
 
-					echo "<option value='$uid'>".$option."</option>";
-				}
-				echo "<br><br>
+										$option = $firstname.', '.$lastname;
+
+										echo "<option value='$uid'>".$option."</option>";
+									}
+
+
+								echo "
+								</td>
+						</tr>
+				</table>
 				<p align='center'>
-						<input type='submit' value='View Selected Student's Forecasts'/><br
+						<input type='submit' value='Select Student'/><br
 				</p>
-			</form>
-			</center>
+		</form>
 		";
 	}
 	else

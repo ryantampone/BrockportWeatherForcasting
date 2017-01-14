@@ -73,11 +73,9 @@ function show_result($message, $result)
                       <td><span align='right'><strong><font color='#00543F'>$forecasterfn $forecasterln</font></strong></span></td>
                     </tr>
                 </table>
-                <br><hr><br>
+                <br><hr style='width:50%'><br>
           ";
-
         }
-
     }
     else
     {

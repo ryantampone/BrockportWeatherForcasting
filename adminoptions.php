@@ -235,15 +235,20 @@
 				</div>
 				<div class='cardBodyContentContainer'>
 					<div class='cardBodyContent'>
-						<center><strong>Number of Forecasts Awaiting Approval: $numberOfReportsAwaitingApproval</strong></center><br>";
+					<center>
+					<table cellpadding='5px'>
+						<tr>
+								<th>
+										Number of Forecasts Awaiting Approval: $numberOfReportsAwaitingApproval
+								</th>
+						</tr>";
 						if ($numberOfReportsAwaitingApproval != 0)
 						{
-							echo"
+							echo "
 								<form action='admin_select_forecast_process.php' method='post'>
-		                <table align='center'>
 		                    <tr>
-		                        <td><span align='right'>Forecast:</span></td>
-		                        <td><select id='forecast' name='forecast'>";
+		                        <td align='center'><span>Forecast: </span>
+		                        <select id='forecast' name='forecast'>";
 
 
 															connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
@@ -275,12 +280,10 @@
 														</td>
 		                    </tr>
 		                </table>
-										<input TYPE='hidden' name='page' id='page' SIZE='50' value='userModifySearch'/>
-		                <p align='center'>
-		                    <input type='submit' value='Review and Approve Selected Forecast'/><br
-		                </p>
+		                    <input type='submit' value='Review and Approve Selected Forecast'/>
 		            </form>
-								<center><form action='/brockportforecasting/forecast_student_select.php'><button >Past Reports</button></form></center>
+								<form action='/brockportforecasting/forecast_student_select.php'><button >Past Reports</button></form>
+								</center>
 								";
 						}
 						else
