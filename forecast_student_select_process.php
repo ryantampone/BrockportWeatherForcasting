@@ -31,6 +31,8 @@ function getForecast()
 	$sql_stmt = "SELECT * FROM `forecasts` WHERE netID='$studentNetID' ORDER BY datesubmitted DESC;";
 
 	$result = mysql_query($sql_stmt);
+	$numrows = mysql_num_rows($result);
+
 	$message = "";
 
 	if (!$result)
@@ -38,7 +40,6 @@ function getForecast()
   	  $message = "Error retrieving forecast from user $studentNetID: ". mysql_error();
 			$statusFlag = "Error";
 	}
-	$numrows = mysql_num_rows($result);
 	if ($numrows == 0)
 	{
 			$message = "This student has not submited any forecasts";

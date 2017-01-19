@@ -10,11 +10,12 @@ function show_result($message, $result)
        {
 					echo "<SCRIPT LANGUAGE='JavaScript'>
 						 window.alert('$message')
-             window.location.href='index.php';
+             window.location.href='forecast_student_select.php';
 						 </SCRIPT>";
        }
   }
 
+  $count = 0;
   if ((isset($_SESSION['id'])) && (string)$_SESSION['access'] == 'admin')
   {
         while ($row = mysql_fetch_assoc($result))
@@ -35,14 +36,22 @@ function show_result($message, $result)
           $forecasterln = $row['forecasterln'];
           $datesubmitted = $row['datesubmitted'];
           $status = $row['status'];
-        //}
 
+        if ($count != 0)
+        {
+          echo"<hr style='width:50%'><br>";
+        }
+        $count ++;
         echo "
           <center><h2><font color='#00543F'><strong>For Our $sport Team</strong></font></h2></center>
                 <table align='center' cellpadding='10px'>
                     <tr>
                       <td><span align='right'><u>Game Time:</u></span></td>
                       <td><span align='right'><strong><font color='#00543F'>$timeofgame</font></strong></span></td>
+                    </tr>
+                    <tr>
+                      <td><span align='right'><u>Game Date:</u></span></td>
+                      <td><span align='right'><strong><font color='#00543F'>$dateofgame</font></strong></span></td>
                     </tr>
                     <tr>
                       <td><span align='right'><u>Location:</u></span></td>
@@ -73,7 +82,7 @@ function show_result($message, $result)
                       <td><span align='right'><strong><font color='#00543F'>$forecasterfn $forecasterln</font></strong></span></td>
                     </tr>
                 </table>
-                <br><hr style='width:50%'><br>
+                <br>
           ";
         }
     }

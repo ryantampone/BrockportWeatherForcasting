@@ -1,9 +1,5 @@
 <?php
 	include 'header.php';
-	echo"
-		<link href='/brockportforecasting/css/cardStyles.css' type='text/css' rel='stylesheet' />
-		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-	";
 
 
 		require('db_cn.inc');
@@ -66,7 +62,7 @@
 								echo "
 								</td>
 						</tr>
-				</table>
+				</table><br>
 				<p align='center'>
 						<input type='submit' value='Select Student'/><br
 				</p>
