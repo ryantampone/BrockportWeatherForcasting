@@ -28,7 +28,7 @@
 	if ((isset($_SESSION['id'])) && ((string)$_SESSION['access'] == 'admin'))
 	{
 		echo "
-		<center><h2>Please enter the UserID of the user you would like to remove</h2></center>
+		<center><h2>Please enter the NetID of the user you would like to remove</h2></center>
     	<div id='userdataform'>
             <form name='form1' action='user_search.php' method='post'>
                 <table align='center'>
@@ -45,7 +45,7 @@
             </form>
         </div>
 
-				<br><center><h4>Or batch remove users based on their registration key</h4></center>
+				<br><center><h4>Or remove all users with the selected registration key</h4></center>
 
 				<div id='batchremoveusersoption'>
 						<form name='form2' action='user_batch_remove_search.php' method='post'>
