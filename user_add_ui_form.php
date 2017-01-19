@@ -25,7 +25,7 @@
                     </tr>
                     <tr>
                         <td><span align='right'>Username:</span></td>
-                        <td><input name='uid' id='uid' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
+                        <td><input name='uid' id='uid' TYPE='text' SIZE='50' onKeyPress='return isTextNameKey(event)' onpaste='return false' required/></td>
                     </tr>
                     <tr>
                         <td><span align='right'>Password:</span></td>

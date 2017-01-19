@@ -8,7 +8,7 @@ function search_user()
 {
 	connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
 
-	$uid = $_POST['uid'];
+	$uid = mysql_real_escape_string($_POST['uid']);
 	$page = $_POST['page'];
 
 	$sql_stmt = "SELECT * FROM user WHERE uid='$uid';";
