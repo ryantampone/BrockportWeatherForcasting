@@ -144,3 +144,8 @@ body
   bottom: 0px;
   right: 10px;
 }
+
+#otherButtons
+{
+  display:inline-block;
+}

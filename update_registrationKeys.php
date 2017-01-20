@@ -24,7 +24,7 @@ function update_registrationKeys()
 	}
 	else
 	{
-	  $message1 = "Student registration key ($studentKey) updated successfully.  ";
+	  $message1 = "Student registration key updated successfully";
 	}
 
 
@@ -40,10 +40,10 @@ function update_registrationKeys()
 	}
 	else
 	{
-	  $message2 = "Coach registration key ($coachKey) updated successfully.";
+	  $message2 = "Coach registration key updated successfully";
 	}
 
-	$message = $message1.$message2;
+	$message = $message1.", ".$message2;
 	show_result($message);
 
 }

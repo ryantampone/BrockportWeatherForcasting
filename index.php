@@ -38,8 +38,10 @@
 									<input type='password' name='pwd' id='pwd' placeholder='Password' SIZE='35' style='margin-bottom: 5px' required><br>
 									<button type='submit' name='submit' id='submit' onClick='' style='margin-bottom: 15px'>Login</button>
 							</form>
-							<form action='/brockportforecasting/registration_enter_key.php'><button >Signup</button></form>
-							<form action='/brockportforecasting/forgotpassword.php'><button >Forgot Password</button></form>
+							<div id='otherButtons'>
+								<form action='/brockportforecasting/registration_enter_key.php'><button >Signup</button></form>
+								<form action='/brockportforecasting/forgotpassword.php'><button >Forgot Password</button></form>
+							</div>
 							</div>
 						</div>
 						</center>

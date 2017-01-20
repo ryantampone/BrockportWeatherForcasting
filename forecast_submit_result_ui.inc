@@ -39,7 +39,8 @@ function show_result($message, $fmemail, $fmphone, $hfemail, $hfphone, $forecast
   }
 
 
-  $messageS = $message.$fmemail.$fmphone.$hfemail.$hfphone.$forecasterfn.$forecasterln;
+  //$messageS = $message.$fmemail.$fmphone.$hfemail.$hfphone.$forecasterfn.$forecasterln;
+  $messageS = $message;
   if ($messageS)
   {
     if ($messageS != "")

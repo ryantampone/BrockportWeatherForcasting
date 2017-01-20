@@ -26,11 +26,11 @@ function modify_user()
 
 	if (!$result)
 	{
-  	  $message = "Error removing User: ($access) $firstname, $lastname: ". mysql_error();
+  	  $message = "Error removing $access User: $firstname, $lastname: ". mysql_error();
 	}
 	else
 	{
-	  $message = "User: ($access) $firstname, $lastname removed successfully.";
+	  $message = "$access User: $firstname, $lastname removed successfully.";
 	}
 
 	show_result($message);

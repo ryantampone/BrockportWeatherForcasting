@@ -22,11 +22,11 @@ function update_emailAndTextNotifications()
 
 	if (!$result1)
 	{
-  	  $message1 = "Error in updating Faculty contact info: ". mysql_error();
+  	  $message1 = "An error occurred when updating the Faculty member contact information: ". mysql_error();
 	}
 	else
 	{
-	  $message1 = "Faculty ($email1, $phone1) updated successfully.";
+	  $message1 = "Faculty contact info updated successfully.";
 	}
 
 
@@ -38,14 +38,14 @@ function update_emailAndTextNotifications()
 
 	if (!$result2)
 	{
-			$message2 = "Error in updating Head Forecaster contact info: ". mysql_error();
+			$message2 = "An error occurred when updating the Head Forecaster contact information: ". mysql_error();
 	}
 	else
 	{
-		$message2 = "Head Forecaster ($email2, $phone2) updated successfully.";
+		$message2 = "Head Forecaster updated successfully.";
 	}
 
-	$message = $message1.$message2;
+	$message = $message1.", ".$message2;
 	show_result($message);
 
 }

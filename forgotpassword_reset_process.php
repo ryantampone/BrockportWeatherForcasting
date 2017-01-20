@@ -25,7 +25,7 @@ function forgot_password()
 	}
 	else if ($numrows == 0)
 	{
-	  $message = "No user found with the provided NetID and Password Reset Code.  Check your information and try again.";
+	  $message = "Invalid NetID or Password Reset Code.  Check your information and try again.";
 		echo "<SCRIPT LANGUAGE='JavaScript'>
 			 window.alert('$message')
 			 window.location.href='forgotpassword.php';

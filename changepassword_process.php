@@ -19,11 +19,11 @@ function update_password()
 
 	if (!$result)
 	{
-  	  $message = "Error updating your ($uid) password: ". mysql_error();
+  	  $message = "Error updating your password $uid : ". mysql_error();
 	}
 	else
 	{
-	  $message = "Your ($uid) password was updated successfully.";
+	  $message = "$uid, Your password was updated successfully.";
 
 	}
 

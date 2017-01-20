@@ -58,7 +58,7 @@
 											$result = mysql_query($sql);
 											if (!$result)
 											{
-												$message = "Error! Unable to retrieve registration keys from the Database: ".mysql_error();
+												$message = "Error! Unable to retrieve registration keys from the Database.  Contact your system administrator: ".mysql_error();
 												echo "<SCRIPT LANGUAGE='JavaScript'>
 													 window.alert('$message')
 													 window.location.href='index.php';

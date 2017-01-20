@@ -28,7 +28,7 @@ function insert_user()
 
 	if (!$result)
 	{
-  	  $message = "Error in inserting User: $lastname , $firstname: ". mysql_error();
+  	  $message = "Error in registering User: $lastname , $firstname: ". mysql_error();
 	}
 	else
 	{
