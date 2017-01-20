@@ -280,8 +280,11 @@
 														</td>
 		                    </tr>
 		                </table>
-		                    <input type='submit' value='Review and Approve Selected Forecast'/>
+		                    <input type='submit' value='Review and Approve Selected Forecast' style='margin-bottom: 5px'/>
 		            </form>
+
+								<hr style='width:50%'>
+
 								<form action='/brockportforecasting/forecast_student_select.php'><button >Past Reports</button></form>
 								</center>
 								";
