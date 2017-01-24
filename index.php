@@ -36,10 +36,12 @@
 							<form action='login/login.php' method='POST'>
 									<input type='text' name='uid' id='uid' placeholder='NetID' onKeyPress='return hasToBeNumberOrLetter(event)' SIZE='35' style='margin-bottom: 10px' required>
 									<input type='password' name='pwd' id='pwd' placeholder='Password' SIZE='35' style='margin-bottom: 5px' required><br>
-									<button type='submit' name='submit' id='submit' onClick='' style='margin-bottom: 15px'>Login</button>
+									<button type='submit' name='submit' id='submit' onClick=''>Login</button>
 							</form>
+
+							<hr style='width:50%'>
+
 							<div id='otherButtons'>
-								<form action='/brockportforecasting/registration_enter_key.php'><button >Signup</button></form>
 								<form action='/brockportforecasting/forgotpassword.php'><button >Forgot Password</button></form>
 							</div>
 							</div>
