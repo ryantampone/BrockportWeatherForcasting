@@ -20,7 +20,7 @@
 								<table align='center'>
 										<tr>
 												<td><span align='right'>Registration Key:</span></td>
-												<td><input name='regkey' id='regkey' TYPE='text' SIZE='50' required/></td>
+												<td><input name='regkey' id='regkey' TYPE='text' SIZE='50' onKeyPress='return isKey(event)' required/></td>
 										</tr>
 								</table>
 								<p align='center'>

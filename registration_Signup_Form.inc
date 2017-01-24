@@ -10,15 +10,15 @@ function show_result($userGroup, $regkey)
                 <table align='center'>
                     <tr>
                         <td><span align='right'>First Name:</span></td>
-                        <td><input name='firstname' id='firstname' TYPE='text' SIZE='50' onKeyPress='isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
+                        <td><input name='firstname' id='firstname' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
                     </tr>
                     <tr>
                         <td><span align='right'>Last Name:</span></td>
-                        <td><input name='lastname' id='lastname' TYPE='text' SIZE='50' onKeyPress='isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
+                        <td><input name='lastname' id='lastname' TYPE='text' SIZE='50' onKeyPress='return isTextCityOrPersonKey(event)' onpaste='return false' required/></td>
                     </tr>
                     <tr>
                         <td><span align='right'>Brockport NetID:</span></td>
-                        <td><input name='uid' id='uid' TYPE='text' SIZE='50' onKeyPress='hasToBeNumberOrLetter(event)' onpaste='return false' required/></td>
+                        <td><input name='uid' id='uid' TYPE='text' SIZE='50' onKeyPress='return isTextNameKey(event)' onpaste='return false' required/></td>
                     </tr>
                     <tr>
                         <td><span align='right'>Password:</span></td>
