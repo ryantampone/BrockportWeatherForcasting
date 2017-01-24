@@ -184,6 +184,7 @@
 														else
 														{
 																echo "<a href='index.php'>Please Login with Your Username and Password</a></li><li>";
+																echo "<a href='registration_enter_key.php'>Signup</a></li><li>";
 																//echo "<center><h4 style='color:white;'>Please Login with Your Username and Password</h4></center>";
                             }
                         ?>
