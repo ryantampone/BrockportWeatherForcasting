@@ -10,9 +10,9 @@ function modify_user()
 	connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
 
 	$id = $_POST['id'];
-	$firstname = $_POST['firstname'];
-	$lastname = $_POST['lastname'];
-	$uid = $_POST['uid'];
+	$firstname = mysql_real_escape_string($_POST['firstname']);
+	$lastname = mysql_real_escape_string($_POST['lastname']);
+	$uid = mysql_real_escape_string($_POST['uid']);
 	$password = $_POST['pwd'];
 	$pwd = password_hash($password, PASSWORD_DEFAULT); //creates an encrypted password
 	$access = $_POST['access'];

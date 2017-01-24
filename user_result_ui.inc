@@ -50,15 +50,15 @@ function show_result($message, $result, $page)
                      <table align='center'>
                          <tr>
                              <td><span align='right'>First Name:</span></td>
-                             <td><input name='firstname' id='firstname' TYPE='text' SIZE='50' value='$firstname' onKeyPress='return isTextCityOrPersonKey(event) onpaste='return false' required/></td>
+                             <td><input name='firstname' id='firstname' TYPE='text' SIZE='50' value=\"$firstname\" onKeyPress='return isTextCityOrPersonKey(event) onpaste='return false' required/></td>
                          </tr>
                          <tr>
                              <td><span align='right'>Last Name:</span></td>
-                             <td><input name='lastname' id='lastname' TYPE='text' SIZE='50' value='$lastname' onKeyPress='return isTextCityOrPersonKey(event) onpaste='return false' required/></td>
+                             <td><input name='lastname' id='lastname' TYPE='text' SIZE='50' value=\"$lastname\" onKeyPress='return isTextCityOrPersonKey(event) onpaste='return false' required/></td>
                          </tr>
                          <tr>
                              <td><span align='right'>Username:</span></td>
-                             <td><input name='uid' id='uid' TYPE='text' SIZE='50' value='$uid' onKeyPress='return isTextCityOrPersonKey(event)' style=\"background-color: #d6dbdf;\" readonly required/></td>
+                             <td><input name='uid' id='uid' TYPE='text' SIZE='50' value=\"$uid\" onKeyPress='return isTextCityOrPersonKey(event)' style=\"background-color: #d6dbdf;\" readonly required/></td>
                          </tr>
                          <tr>
                              <td><span align='right'>Password:</span></td>

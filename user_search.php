@@ -28,7 +28,7 @@ function search_user()
 	//Create an appropriate message
 	$message = "";
 	if ($numrows == 0)
-		 $message = "Unable to find a user with the provided UserID";
+		 $message = "Unable to find a user with the provided NetID";
 
 	//Display the results
 	show_result($message, $result, $page);

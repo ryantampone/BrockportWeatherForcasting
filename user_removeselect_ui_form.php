@@ -33,8 +33,8 @@
             <form name='form1' action='user_search.php' method='post'>
                 <table align='center'>
                     <tr>
-                        <td><span align='right'>UserID:</span></td>
-                        <td><input name='uid' id='uid' onKeyPress='return isTextCityOrPersonKey(event)' TYPE='text' SIZE='50' required/></td>
+                        <td><span align='right'>NetID:</span></td>
+                        <td><input name='uid' id='uid' onKeyPress='return hasToBeNumberOrLetter(event)' TYPE='text' SIZE='50' required/></td>
                     </tr>
                 </table>
 								<input TYPE='hidden' name='page' id='page' SIZE='50' value='userRemoveSearch'/>
