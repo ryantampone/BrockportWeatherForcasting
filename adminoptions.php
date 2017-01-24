@@ -308,8 +308,12 @@
 				</div>
 				<div class='cardBodyContentContainer'>
 					<div class='cardBodyContent'>
-						<form action='/brockportforecasting/studentoptions.php'><button >Student Dashboard</button></form><br>
-						<form action='/brockportforecasting/coachoptions.php'><button >Coach Dashboard</button></form><br>
+						<div id='studentButton'>
+							<form action='/brockportforecasting/studentoptions.php'><button id='stBtn'>Student Dashboard</button></form>
+						</div>
+						<div id='coachButton'>
+							<form action='/brockportforecasting/coachoptions.php'><button id='cchBtn'>Coach Dashboard</button></form>
+						</div>
 					</div>
 				</div>
 			</div>

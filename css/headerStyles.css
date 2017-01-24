@@ -149,3 +149,19 @@ body
 {
   display:inline-block;
 }
+
+#studentButton
+{
+  float: left;
+}
+
+#coachButton
+{
+  float: right;
+}
+
+#stBtn, #cchBtn
+{
+  width: 100px;
+  height: 100px;
+}
