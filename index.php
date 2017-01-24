@@ -26,6 +26,40 @@
 		else
 		{
 				echo"
+				<style>
+						.button
+						{
+						    background-color: #5193FB;
+						    border: none;
+						    color: white;
+						    padding: 10px 94px;
+						    text-align: center;
+						    text-decoration: none;
+						    display: inline-block;
+						    font-size: 16px;
+						    margin: 4px 2px;
+						    cursor: pointer;
+						}
+
+						input[type=text]
+						{
+						    width: 80%;
+						    padding: 5px 20px;
+						    margin: 0px 0;
+						    box-sizing: border-box;
+								font-size:18px;
+						}
+
+						input[type=password]
+						{
+								width: 80%;
+								padding: 5px 20px;
+								margin: 0px 0;
+								box-sizing: border-box;
+								font-size:18px;
+						}
+				</style>
+
 						<center>
 						<br><br><br><br><br>
 						<div id='callToAction'>
@@ -36,14 +70,8 @@
 							<form action='login/login.php' method='POST'>
 									<input type='text' name='uid' id='uid' placeholder='NetID' onKeyPress='return hasToBeNumberOrLetter(event)' SIZE='35' style='margin-bottom: 10px' required>
 									<input type='password' name='pwd' id='pwd' placeholder='Password' SIZE='35' style='margin-bottom: 5px' required><br>
-									<button type='submit' name='submit' id='submit' onClick=''>Login</button>
+									<button class='button' type='submit' name='submit' id='submit' onClick=''>Sign in</button>
 							</form>
-
-							<hr style='width:50%'>
-
-							<div id='otherButtons'>
-								<form action='/brockportforecasting/forgotpassword.php'><button >Forgot Password</button></form>
-							</div>
 							</div>
 						</div>
 						</center>
