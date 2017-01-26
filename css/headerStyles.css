@@ -152,12 +152,12 @@ body
 
 #studentButton
 {
-  float: left;
+  /*float: left;*/
 }
 
 #coachButton
 {
-  float: right;
+  /*float: right;*/
 }
 
 #stBtn, #cchBtn
