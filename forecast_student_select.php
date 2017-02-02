@@ -36,7 +36,7 @@
 								<td><span align='right'>Student:</span></td>
 								<td><select id='student' name='student'>";
 
-									$sql = "SELECT * FROM `user` WHERE status='Active' AND (access='student' OR access='admin') ORDER BY first ASC;";
+									$sql = "SELECT DISTINCT first, last, uid FROM `user`, `forecasts` WHERE (user.uid = forecasts.netID) AND (user.status='Active') AND (user.access='student' OR user.access='admin') ORDER BY user.first ASC;";
 									$result = mysql_query($sql);
 									if (!$result)
 									{
