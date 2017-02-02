@@ -299,7 +299,7 @@
 				</div>
 			</div>
 
-
+			<!--
 			<div class='cardBody'>
 				<div class='cardHeader'>
 					<div class='cardHeaderTitle'>
@@ -317,7 +317,7 @@
 					</div>
 				</div>
 			</div>
-
+			-->
 
 
 		</div>

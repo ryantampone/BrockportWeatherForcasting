@@ -178,6 +178,12 @@
                             if (isset($_SESSION['id']))
 														{
 																echo "<li><a href='index.php'>$firstName $lastName's $access dashboard</a> </li><li>";
+																if ($access == 'admin')
+																{
+																	echo "<li><a href='#'>Dashboards</a>";
+																	echo "<ul><li><a href='studentoptions.php'>Student Dashboard</a></li>";
+																	echo "<li><a href='coachoptions.php'>Coach Dashboard</a></li></ul></li>";
+																}
 																echo "<li><a href='#'>Settings</a>";
 																echo "<ul><li><a href='changepassword.php'>Change Password</a></li>";
 																echo "<li><a href='login/logout.php'>Sign Out</a></li></ul></li>";
