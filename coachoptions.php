@@ -75,6 +75,7 @@
 													connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
 													$sql = "SELECT * FROM `forecasts` WHERE status = 'approved' AND dateofgame >= '$todaysDate' ORDER BY 'id';";
 													$result = mysql_query($sql);
+													$numrows = mysql_num_rows($result);
 													if (!$result)
 													{
 														$message = "Error! Unable to get forecasts from the Database: ".mysql_error();
@@ -83,7 +84,7 @@
 															 window.location.href='index.php';
 															 </SCRIPT>";
 														exit;
-													}
+													}												
 													while ($row = mysql_fetch_assoc($result))
 													{
 														$id = $row['id'];

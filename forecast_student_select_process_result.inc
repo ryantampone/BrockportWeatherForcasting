@@ -4,19 +4,30 @@ include 'header.php';
 function show_result($message, $result)
 {
   // If the message is non-null and not an empty string print it
+  $access = (string)$_SESSION['access'];
+  $redirect = '';
+  if ($access == 'admin')
+  {
+    $redirect = 'forecast_student_select.php';
+  }
+  else if ($access == 'student')
+  {
+    $redirect = 'studentoptions.php';
+  }
+
   if ($message)
   {
     if ($message != "")
        {
 					echo "<SCRIPT LANGUAGE='JavaScript'>
 						 window.alert('$message')
-             window.location.href='forecast_student_select.php';
+             window.location.href='$redirect';
 						 </SCRIPT>";
        }
   }
 
   $count = 0;
-  if ((isset($_SESSION['id'])) && (string)$_SESSION['access'] == 'admin')
+  if ((isset($_SESSION['id'])) && (string)$_SESSION['access'] == 'admin' || (string)$_SESSION['access'] == 'student')
   {
         while ($row = mysql_fetch_assoc($result))
         {

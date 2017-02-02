@@ -184,14 +184,18 @@
 																	echo "<ul><li><a href='studentoptions.php'>Student Dashboard</a></li>";
 																	echo "<li><a href='coachoptions.php'>Coach Dashboard</a></li></ul></li>";
 																}
-																echo "<li><a href='#'>Settings</a>";
+																if ($access == 'student')
+																{
+																	echo "<li><a href='forecast_student_select_process.php'>Past Forecasts</a>";
+																}
+																echo "<li><a href='#'>Options</a>";
 																echo "<ul><li><a href='changepassword.php'>Change Password</a></li>";
 																echo "<li><a href='login/logout.php'>Sign Out</a></li></ul></li>";
                             }
 														else
 														{
 																echo "<li><a href='index.php'>Home</a>";
-																echo "<li><a href='registration_enter_key.php'>Signup</a>";
+																echo "<li><a href='registration_enter_key.php'>Sign up</a>";
 																echo "<li><a href='forgotpassword.php'>Forgot Password</a>";
 																//echo "<center><h4 style='color:white;'>Please Login with Your Username and Password</h4></center>";
                             }

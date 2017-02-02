@@ -32,12 +32,17 @@ function getForecast()
 	$sql_stmt = "SELECT * FROM `forecasts` WHERE id='$forecastid';";
 
 	$result = mysql_query($sql_stmt);
+	$numrows = mysql_num_rows($result);
 	$message = "";
-
 	if (!$result)
 	{
-  	  $message = "Error retrieving forecast: $forecastid: ". mysql_error();
+  	  $message = "Error retrieving forecast details for forecast: $forecastid: ". mysql_error();
 			$statusFlag = "Error";
+	}
+	if ($numrows == 0)
+	{
+		$message = "Error retrieving forecast details for forecast: $forecastid";
+		$statusFlag = "Error";
 	}
 	else
 	{

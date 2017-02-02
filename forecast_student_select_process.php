@@ -26,7 +26,17 @@ function getForecast()
 {
 	connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
 
-	$studentNetID = $_POST['student'];
+	$studentNetID = '';
+	$access = (string)$_SESSION['access'];
+	$netID = (string)$_SESSION['uid'];
+	if ($access == 'student')
+	{
+		$studentNetID = $netID;
+	}
+	else
+	{
+		$studentNetID = $_POST['student'];
+	}
 
 	$sql_stmt = "SELECT * FROM `forecasts` WHERE netID='$studentNetID' ORDER BY datesubmitted DESC;";
 
@@ -42,7 +52,7 @@ function getForecast()
 	}
 	if ($numrows == 0)
 	{
-			$message = "This student has not submited any forecasts";
+			$message = "$studentNetID has not submited any forecasts";
 			$statusFlag = "Error";
 	}
 	show_result($message, $result);
