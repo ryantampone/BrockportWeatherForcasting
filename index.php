@@ -47,7 +47,7 @@
 						    padding: 5px 20px;
 						    margin: 0px 0;
 						    box-sizing: border-box;
-								font-size:18px;
+								font-size:15px;
 						}
 
 						input[type=password]
@@ -56,14 +56,24 @@
 								padding: 5px 20px;
 								margin: 0px 0;
 								box-sizing: border-box;
-								font-size:18px;
+								font-size:15px;
+						}
+
+						#callToAction
+						{
+						  color: #444444;
+						  font-size: 35px;
+						  font-family: 'Roboto', sans-serif;
+							font-weight: 200;
 						}
 				</style>
 
 						<center>
 						<br><br><br><br><br>
 						<div id='callToAction'>
+							Sign in to access your account
 						</div>
+						<br>
 						<div id='login'>
 							<div class='innerTable'>
 							<p align='center'><img src='src/login_icon.png' height='110' width='110'/></p>

@@ -170,22 +170,23 @@
             <div id="nav_wrapper">
                 <ul>
                     <!-- <li><a href="/brockportforecasting/forecastoptions.php">Main Menu</a></li> -->
-										<li>	<?php
+												<?php
 														$firstName = (string)$_SESSION['first'];
 														$lastName = (string)$_SESSION['last'];
 														$access = (string)$_SESSION['access'];
 														$netID = (string)$_SESSION['uid'];
                             if (isset($_SESSION['id']))
 														{
-																echo "<a href='index.php'>$firstName $lastName's $access dashboard</a> </li><li>";
-																echo "<a href='changepassword.php'>Change Password</a> </li><li>";
-																echo "<a href='login/logout.php'>Logout</a> </li><li>";
+																echo "<li><a href='index.php'>$firstName $lastName's $access dashboard</a> </li><li>";
+																echo "<li><a href='#'>Settings</a>";
+																echo "<ul><li><a href='changepassword.php'>Change Password</a></li>";
+																echo "<li><a href='login/logout.php'>Sign Out</a></li></ul></li>";
                             }
 														else
 														{
-																echo "<a href='index.php'>Please Login with Your Username and Password</a></li><li>";
-																echo "<a href='registration_enter_key.php'>Signup</a></li><li>";
-																echo "<a href='forgotpassword.php'>Forgot Password</a></li><li>";
+																echo "<li><a href='index.php'>Home</a>";
+																echo "<li><a href='registration_enter_key.php'>Signup</a>";
+																echo "<li><a href='forgotpassword.php'>Forgot Password</a>";
 																//echo "<center><h4 style='color:white;'>Please Login with Your Username and Password</h4></center>";
                             }
                         ?>

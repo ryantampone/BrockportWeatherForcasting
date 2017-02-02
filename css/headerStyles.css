@@ -23,6 +23,7 @@ body
 #nav
 {
   background-color: #00533E;
+  z-index: 1;
 }
 
 #nav_wrapper
@@ -38,6 +39,7 @@ body
   padding: 0;
   margin: 0;
   position: relative;
+  z-index: 1;
 }
 
 #nav li
